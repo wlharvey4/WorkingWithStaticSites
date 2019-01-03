@@ -1,0 +1,45 @@
+# -*- mode: org; fill-column: 79; -*-
+
+#+TITLE: Working With Static Sites
+#+SUBTITLE: Bringing the Power of Simplicity to Modern Sites
+#+AUTHOR: Raymond Camden
+#+SUBAUTHOR: Brian Rinaldo
+#+DATE: February 28, 2017
+#+MACRO: VERSION 0.0.1
+#+MACRO: EDITION 0.1
+
+* Why Static Sites
+
+* Building a Basic Static Site
+
+* Building a Blog
+
+* Building a Documentation Site
+
+* Adding Dynamic Elements
+
+* Adding a CMS
+
+* Deployment
+
+* Mirgrating to a Static Site
+
+* Copying
+  :PROPERTIES:
+  :Copying:  t
+  :END:
+  Published: {{{date}}}
+
+  Produced: {{{time(%F %R)}}}
+  Version: {{{VERSION}}}
+  Edition: {{{EDITION}}}
+* Index
+  :PROPERTIES:
+  :Index:    t
+  :END:
+* Export Settings                                                  :noexport:
+#+TEXINFO_CLASS: info
+#+TEXINFO_DIR_CATEGORY:WebDev
+#+TEXINFO_DIR_TITLE:working-with-static-sites
+#+TEXINFO_DIR_DESC:Outline of Working With Static Sites by R Campden & B Rinaldo
+
