@@ -1,13 +1,14 @@
 # -*- mode: org; fill-column: 79; -*-
 
-#+TITLE: Working With Static Sites
+#+TITLE: Outline of Working With Static Sites
 #+SUBTITLE: Bringing the Power of Simplicity to Modern Sites
 #+AUTHOR: Raymond Camden
 #+SUBAUTHOR: Brian Rinaldo
 #+DATE: February 28, 2017
-#+MACRO: VERSION 0.0.3
+#+MACRO: VERSION 0.0.5
 #+MACRO: EDITION 0.1
 
+#+texinfo: @insertcopying
 
 * Preface
   :PROPERTIES:
@@ -40,7 +41,7 @@
     - Desktop tools that have similar features are not covered.
 *** How this book is organized
     - Begins by describing why you would want to use static sites.
-    - Subsequent chapters focus oni a specific type of site and uses this as a
+    - Subsequent chapters focus on a specific type of site and uses this as a
       way of introducing different static site generators.
     - How to build a site
     - More advanced topics, such as adding dynamic elements back in,
@@ -58,6 +59,9 @@
         typed literally by the user
    - {{{samp(Sample)}}} :: Shows text that should be replaced with
         user-supplied values or by values determined by context.
+** Code Examples
+   Supplemental material (code examples, exercises, etc.) is available for
+   download at [[https://github.com/cfjedimaster/Static-Sites-Book]]
 * Why Static Sites
 
 ** Benefits of Static Sites
@@ -220,8 +224,10 @@
   :PROPERTIES:
   :Copying:  t
   :END:
-  Published: {{{date}}}
+  Based upon /{{{title}}}/ by {{{author}}} & {{{subauthor}}} (O'Reilly).
+  \copy 2017 {{{author}}}, 978-1-491-96094-3.
 
+  This document:
   Produced: {{{time(%F %R)}}}
   Version: {{{VERSION}}}
   Edition: {{{EDITION}}}
@@ -234,5 +240,6 @@
 #+TEXINFO_DIR_CATEGORY:WebDev
 #+TEXINFO_DIR_TITLE:working-with-static-sites
 #+TEXINFO_DIR_DESC:Outline of Working With Static Sites by R Campden & B Rinaldo
+#+MACRO: subauthor Brian Rinaldo
 #+MACRO: command @@texinfo:@command{*@@$1@@texinfo:*}@@
 #+MACRO: samp @@texinfo:@samp{@@<$1>@@texinfo:}@@

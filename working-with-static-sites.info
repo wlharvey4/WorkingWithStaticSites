@@ -1,0 +1,985 @@
+This is working-with-static-sites.info, produced by makeinfo version 6.5
+from working-with-static-sites.texi.
+
+Based upon _Outline of Working With Static Sites_ by Raymond Camden &
+Brian Rinaldo (O’Reilly).  © 2017 Raymond Camden, 978-1-491-96094-3.
+
+   This document: Produced: 2019-01-03 11:40 Version: 0.0.4 Edition: 0.1
+INFO-DIR-SECTION WebDev
+START-INFO-DIR-ENTRY
+* working-with-static-sites. Outline of Working With Static Sites by R Campden & B Rinaldo.
+END-INFO-DIR-ENTRY
+
+
+File: working-with-static-sites.info,  Node: Top,  Next: Preface,  Up: (dir)
+
+Outline of Working With Static Sites
+************************************
+
+Based upon _Outline of Working With Static Sites_ by Raymond Camden &
+Brian Rinaldo (O’Reilly).  © 2017 Raymond Camden, 978-1-491-96094-3.
+
+   This document: Produced: 2019-01-03 11:40 Version: 0.0.4 Edition: 0.1
+
+* Menu:
+
+* Preface::
+* Why Static Sites::
+* Building a Basic Static Site::
+* Building a Blog: Building a Blog 1.
+* Building a Documentation Site::
+* Adding Dynamic Elements::
+* Adding a CMS::
+* Deployment::
+* Mirgrating to a Static Site::
+* Index::
+
+— The Detailed Node Listing —
+
+Preface
+
+* What You Need to Know::
+* Conventions::
+* Code Examples::
+
+What You Need to Know
+
+* Who this book is for::
+* What's not covered::
+* How this book is organized::
+
+Why Static Sites
+
+* Benefits of Static Sites::
+
+Building a Basic Static Site
+
+* Welcome to Harp::
+* Your First Harp Project::
+* Working With Layouts and Partials::
+* Working With Data::
+* Generating a Site::
+* Building Camden Grounds::
+* Going Further With Harp::
+
+Building a Blog
+
+* Blogging With Jekyll::
+* Your First Jekyll Project::
+* Writing a Post::
+* A Quick Introduction to Liquid::
+* Working With Layouts and Includes::
+* Adding Additional Files::
+* Working With Data: Working With Data 1.
+* Configuring Your Jekyll Site::
+* Generating a Site: Generating a Site 1.
+* Building a Blog::
+* Going Further with Jekyll::
+
+Building a Documentation Site
+
+* Characteristics of a Documentation Site::
+* Choosing a Generator for Your Documentation Site::
+* Our Sample Documentation Site::
+* Creating the Site::
+* Going Further::
+
+Creating the Site
+
+* Installing Hugo::
+* Generating the Initial Site Files::
+* Configuring the Hugo Site::
+* Adding Content::
+* Creating the Layout::
+
+Adding Dynamic Elements
+
+* Handling Forms::
+* Adding Comments::
+* Adding Search::
+* Even More Options::
+
+Handling Forms
+
+* Wufoo Forms::
+* Google Docs Forms::
+* Formspree::
+* Adding a Comment Form to Camden Grounds::
+
+Adding Comments
+
+* Working with Disqus::
+* Adding Comments to The Cat Blog::
+
+Adding Search
+
+* Creating a Custom Search Engine::
+* Adding a Custom Search Engine to a Real Site::
+
+Adding a CMS
+
+* CloudCannon::
+* Netlify CMS::
+* Jekyll Admin::
+* More Options::
+
+CloudCannon
+
+* Creating a Site on CloudCannon::
+* Editing a Site on CloudCannon::
+* Where to Go from Here::
+
+Netlify CMS
+
+* Setting Up the Netlify CMS::
+* Where to Go from Here: Where to Go from Here 1.
+
+Jekyll Admin
+
+* Setting Up Jekyll Admin::
+* Editing a Site in Jekyll Admin::
+* Where to Go from Here: Where to Go from Here 2.
+
+More Options
+
+* Forestry.io: Forestryio.
+* Lektor::
+* Headless CMS::
+
+Deployment
+
+* Plain Old Web Servers::
+* Cloud File Storage Providers::
+* Deploying with Surge::
+* Deploying with Netlify::
+* Summary::
+
+Cloud File Storage Providers
+
+* Hosting a Site on Amazon S3::
+* Hosting a Site on Google Cloud Storage::
+
+Mirgrating to a Static Site
+
+* Migrating from WordPress to Jekyll::
+* Other Migration Options::
+* Go Forth and Be Static::
+
+Other Migration Options
+
+* Hugo::
+* Middleman::
+* Hexo::
+* Harp::
+* Many More Options Are Available::
+
+
+
+File: working-with-static-sites.info,  Node: Preface,  Next: Why Static Sites,  Prev: Top,  Up: Top
+
+Preface
+*******
+
+Because of the *benefits* static site generators offer, static sites
+generators are used to run thousands of sites and are becoming the basis
+for a broad *set of tools* that reach the casual developer and the
+nontechnical content writer.
+
+   It can be difficult to know which tools to choose and how to get
+started.
+
+   *That is the problem the authors hope to address in writing this
+book.*  By providing *common scenarios* and insights on how to address
+them, the authors hope to make it easier for anyone to create static
+sites solutions and take advantage of the speed, flexibilty, and
+security they offer.
+
+* Menu:
+
+* What You Need to Know::
+* Conventions::
+* Code Examples::
+
+
+File: working-with-static-sites.info,  Node: What You Need to Know,  Next: Conventions,  Up: Preface
+
+What You Need to Know
+=====================
+
+* Menu:
+
+* Who this book is for::
+* What's not covered::
+* How this book is organized::
+
+
+File: working-with-static-sites.info,  Node: Who this book is for,  Next: What's not covered,  Up: What You Need to Know
+
+Who this book is for
+--------------------
+
+   • This book is for web developers who are looking for a simpler way
+     to build and deploy websites.
+   • For developers with experience with dynamic app servers (like PHP,
+     Node.js, and ColdFusion), this book will present a simpler
+     alternative.
+   • For developers who are still working with simple websites but need
+     a way to make them more powerful.
+
+
+File: working-with-static-sites.info,  Node: What's not covered,  Next: How this book is organized,  Prev: Who this book is for,  Up: What You Need to Know
+
+What’s not covered
+------------------
+
+   • This book focuses on static site generators that work from the
+     command line.
+   • Desktop tools that have similar features are not covered.
+
+
+File: working-with-static-sites.info,  Node: How this book is organized,  Prev: What's not covered,  Up: What You Need to Know
+
+How this book is organized
+--------------------------
+
+   • Begins by describing why you would want to use static sites.
+   • Subsequent chapters focus on a specific type of site and uses this
+     as a way of introducing different static site generators.
+   • How to build a site
+   • More advanced topics, such as adding dynamic elements back in,
+   • Working with CMS
+   • How to deploy and host a site
+   • How to migrate from a dynamic site to a static one
+
+
+File: working-with-static-sites.info,  Node: Conventions,  Next: Code Examples,  Prev: What You Need to Know,  Up: Preface
+
+Conventions
+===========
+
+_Italic_
+     Indicates new terms, URLs, email addresses, filenames, and file
+     extensions
+‘Constant Width’
+     Used for program listings, as well as within paragraphs to refer to
+     program elements such as variables or function names, databases,
+     data types, environment variables, statements, and keywords
+‘*Command*’
+     Shows commands or other text that should be typed literally by the
+     user
+‘<Sample>’
+     Shows text that should be replaced with user-supplied values or by
+     values determined by context.
+
+
+File: working-with-static-sites.info,  Node: Code Examples,  Prev: Conventions,  Up: Preface
+
+Code Examples
+=============
+
+Supplemental material (code examples, exercises, etc.)  is available for
+download at <https://github.com/cfjedimaster/Static-Sites-Book>
+
+
+File: working-with-static-sites.info,  Node: Why Static Sites,  Next: Building a Basic Static Site,  Prev: Preface,  Up: Top
+
+1 Why Static Sites
+******************
+
+* Menu:
+
+* Benefits of Static Sites::
+
+
+File: working-with-static-sites.info,  Node: Benefits of Static Sites,  Up: Why Static Sites
+
+1.1 Benefits of Static Sites
+============================
+
+
+File: working-with-static-sites.info,  Node: Building a Basic Static Site,  Next: Building a Blog 1,  Prev: Why Static Sites,  Up: Top
+
+2 Building a Basic Static Site
+******************************
+
+* Menu:
+
+* Welcome to Harp::
+* Your First Harp Project::
+* Working With Layouts and Partials::
+* Working With Data::
+* Generating a Site::
+* Building Camden Grounds::
+* Going Further With Harp::
+
+
+File: working-with-static-sites.info,  Node: Welcome to Harp,  Next: Your First Harp Project,  Up: Building a Basic Static Site
+
+2.1 Welcome to Harp
+===================
+
+
+File: working-with-static-sites.info,  Node: Your First Harp Project,  Next: Working With Layouts and Partials,  Prev: Welcome to Harp,  Up: Building a Basic Static Site
+
+2.2 Your First Harp Project
+===========================
+
+
+File: working-with-static-sites.info,  Node: Working With Layouts and Partials,  Next: Working With Data,  Prev: Your First Harp Project,  Up: Building a Basic Static Site
+
+2.3 Working With Layouts and Partials
+=====================================
+
+
+File: working-with-static-sites.info,  Node: Working With Data,  Next: Generating a Site,  Prev: Working With Layouts and Partials,  Up: Building a Basic Static Site
+
+2.4 Working With Data
+=====================
+
+
+File: working-with-static-sites.info,  Node: Generating a Site,  Next: Building Camden Grounds,  Prev: Working With Data,  Up: Building a Basic Static Site
+
+2.5 Generating a Site
+=====================
+
+
+File: working-with-static-sites.info,  Node: Building Camden Grounds,  Next: Going Further With Harp,  Prev: Generating a Site,  Up: Building a Basic Static Site
+
+2.6 Building Camden Grounds
+===========================
+
+
+File: working-with-static-sites.info,  Node: Going Further With Harp,  Prev: Building Camden Grounds,  Up: Building a Basic Static Site
+
+2.7 Going Further With Harp
+===========================
+
+
+File: working-with-static-sites.info,  Node: Building a Blog 1,  Next: Building a Documentation Site,  Prev: Building a Basic Static Site,  Up: Top
+
+3 Building a Blog
+*****************
+
+* Menu:
+
+* Blogging With Jekyll::
+* Your First Jekyll Project::
+* Writing a Post::
+* A Quick Introduction to Liquid::
+* Working With Layouts and Includes::
+* Adding Additional Files::
+* Working With Data: Working With Data 1.
+* Configuring Your Jekyll Site::
+* Generating a Site: Generating a Site 1.
+* Building a Blog::
+* Going Further with Jekyll::
+
+
+File: working-with-static-sites.info,  Node: Blogging With Jekyll,  Next: Your First Jekyll Project,  Up: Building a Blog 1
+
+3.1 Blogging With Jekyll
+========================
+
+
+File: working-with-static-sites.info,  Node: Your First Jekyll Project,  Next: Writing a Post,  Prev: Blogging With Jekyll,  Up: Building a Blog 1
+
+3.2 Your First Jekyll Project
+=============================
+
+
+File: working-with-static-sites.info,  Node: Writing a Post,  Next: A Quick Introduction to Liquid,  Prev: Your First Jekyll Project,  Up: Building a Blog 1
+
+3.3 Writing a Post
+==================
+
+
+File: working-with-static-sites.info,  Node: A Quick Introduction to Liquid,  Next: Working With Layouts and Includes,  Prev: Writing a Post,  Up: Building a Blog 1
+
+3.4 A Quick Introduction to Liquid
+==================================
+
+
+File: working-with-static-sites.info,  Node: Working With Layouts and Includes,  Next: Adding Additional Files,  Prev: A Quick Introduction to Liquid,  Up: Building a Blog 1
+
+3.5 Working With Layouts and Includes
+=====================================
+
+
+File: working-with-static-sites.info,  Node: Adding Additional Files,  Next: Working With Data 1,  Prev: Working With Layouts and Includes,  Up: Building a Blog 1
+
+3.6 Adding Additional Files
+===========================
+
+
+File: working-with-static-sites.info,  Node: Working With Data 1,  Next: Configuring Your Jekyll Site,  Prev: Adding Additional Files,  Up: Building a Blog 1
+
+3.7 Working With Data
+=====================
+
+
+File: working-with-static-sites.info,  Node: Configuring Your Jekyll Site,  Next: Generating a Site 1,  Prev: Working With Data 1,  Up: Building a Blog 1
+
+3.8 Configuring Your Jekyll Site
+================================
+
+
+File: working-with-static-sites.info,  Node: Generating a Site 1,  Next: Building a Blog,  Prev: Configuring Your Jekyll Site,  Up: Building a Blog 1
+
+3.9 Generating a Site
+=====================
+
+
+File: working-with-static-sites.info,  Node: Building a Blog,  Next: Going Further with Jekyll,  Prev: Generating a Site 1,  Up: Building a Blog 1
+
+3.10 Building a Blog
+====================
+
+
+File: working-with-static-sites.info,  Node: Going Further with Jekyll,  Prev: Building a Blog,  Up: Building a Blog 1
+
+3.11 Going Further with Jekyll
+==============================
+
+
+File: working-with-static-sites.info,  Node: Building a Documentation Site,  Next: Adding Dynamic Elements,  Prev: Building a Blog 1,  Up: Top
+
+4 Building a Documentation Site
+*******************************
+
+* Menu:
+
+* Characteristics of a Documentation Site::
+* Choosing a Generator for Your Documentation Site::
+* Our Sample Documentation Site::
+* Creating the Site::
+* Going Further::
+
+
+File: working-with-static-sites.info,  Node: Characteristics of a Documentation Site,  Next: Choosing a Generator for Your Documentation Site,  Up: Building a Documentation Site
+
+4.1 Characteristics of a Documentation Site
+===========================================
+
+
+File: working-with-static-sites.info,  Node: Choosing a Generator for Your Documentation Site,  Next: Our Sample Documentation Site,  Prev: Characteristics of a Documentation Site,  Up: Building a Documentation Site
+
+4.2 Choosing a Generator for Your Documentation Site
+====================================================
+
+
+File: working-with-static-sites.info,  Node: Our Sample Documentation Site,  Next: Creating the Site,  Prev: Choosing a Generator for Your Documentation Site,  Up: Building a Documentation Site
+
+4.3 Our Sample Documentation Site
+=================================
+
+
+File: working-with-static-sites.info,  Node: Creating the Site,  Next: Going Further,  Prev: Our Sample Documentation Site,  Up: Building a Documentation Site
+
+4.4 Creating the Site
+=====================
+
+* Menu:
+
+* Installing Hugo::
+* Generating the Initial Site Files::
+* Configuring the Hugo Site::
+* Adding Content::
+* Creating the Layout::
+
+
+File: working-with-static-sites.info,  Node: Installing Hugo,  Next: Generating the Initial Site Files,  Up: Creating the Site
+
+4.4.1 Installing Hugo
+---------------------
+
+
+File: working-with-static-sites.info,  Node: Generating the Initial Site Files,  Next: Configuring the Hugo Site,  Prev: Installing Hugo,  Up: Creating the Site
+
+4.4.2 Generating the Initial Site Files
+---------------------------------------
+
+
+File: working-with-static-sites.info,  Node: Configuring the Hugo Site,  Next: Adding Content,  Prev: Generating the Initial Site Files,  Up: Creating the Site
+
+4.4.3 Configuring the Hugo Site
+-------------------------------
+
+
+File: working-with-static-sites.info,  Node: Adding Content,  Next: Creating the Layout,  Prev: Configuring the Hugo Site,  Up: Creating the Site
+
+4.4.4 Adding Content
+--------------------
+
+
+File: working-with-static-sites.info,  Node: Creating the Layout,  Prev: Adding Content,  Up: Creating the Site
+
+4.4.5 Creating the Layout
+-------------------------
+
+
+File: working-with-static-sites.info,  Node: Going Further,  Prev: Creating the Site,  Up: Building a Documentation Site
+
+4.5 Going Further
+=================
+
+
+File: working-with-static-sites.info,  Node: Adding Dynamic Elements,  Next: Adding a CMS,  Prev: Building a Documentation Site,  Up: Top
+
+5 Adding Dynamic Elements
+*************************
+
+* Menu:
+
+* Handling Forms::
+* Adding Comments::
+* Adding Search::
+* Even More Options::
+
+
+File: working-with-static-sites.info,  Node: Handling Forms,  Next: Adding Comments,  Up: Adding Dynamic Elements
+
+5.1 Handling Forms
+==================
+
+* Menu:
+
+* Wufoo Forms::
+* Google Docs Forms::
+* Formspree::
+* Adding a Comment Form to Camden Grounds::
+
+
+File: working-with-static-sites.info,  Node: Wufoo Forms,  Next: Google Docs Forms,  Up: Handling Forms
+
+5.1.1 Wufoo Forms
+-----------------
+
+
+File: working-with-static-sites.info,  Node: Google Docs Forms,  Next: Formspree,  Prev: Wufoo Forms,  Up: Handling Forms
+
+5.1.2 Google Docs Forms
+-----------------------
+
+
+File: working-with-static-sites.info,  Node: Formspree,  Next: Adding a Comment Form to Camden Grounds,  Prev: Google Docs Forms,  Up: Handling Forms
+
+5.1.3 Formspree
+---------------
+
+
+File: working-with-static-sites.info,  Node: Adding a Comment Form to Camden Grounds,  Prev: Formspree,  Up: Handling Forms
+
+5.1.4 Adding a Comment Form to Camden Grounds
+---------------------------------------------
+
+
+File: working-with-static-sites.info,  Node: Adding Comments,  Next: Adding Search,  Prev: Handling Forms,  Up: Adding Dynamic Elements
+
+5.2 Adding Comments
+===================
+
+* Menu:
+
+* Working with Disqus::
+* Adding Comments to The Cat Blog::
+
+
+File: working-with-static-sites.info,  Node: Working with Disqus,  Next: Adding Comments to The Cat Blog,  Up: Adding Comments
+
+5.2.1 Working with Disqus
+-------------------------
+
+
+File: working-with-static-sites.info,  Node: Adding Comments to The Cat Blog,  Prev: Working with Disqus,  Up: Adding Comments
+
+5.2.2 Adding Comments to The Cat Blog
+-------------------------------------
+
+
+File: working-with-static-sites.info,  Node: Adding Search,  Next: Even More Options,  Prev: Adding Comments,  Up: Adding Dynamic Elements
+
+5.3 Adding Search
+=================
+
+* Menu:
+
+* Creating a Custom Search Engine::
+* Adding a Custom Search Engine to a Real Site::
+
+
+File: working-with-static-sites.info,  Node: Creating a Custom Search Engine,  Next: Adding a Custom Search Engine to a Real Site,  Up: Adding Search
+
+5.3.1 Creating a Custom Search Engine
+-------------------------------------
+
+
+File: working-with-static-sites.info,  Node: Adding a Custom Search Engine to a Real Site,  Prev: Creating a Custom Search Engine,  Up: Adding Search
+
+5.3.2 Adding a Custom Search Engine to a Real Site
+--------------------------------------------------
+
+
+File: working-with-static-sites.info,  Node: Even More Options,  Prev: Adding Search,  Up: Adding Dynamic Elements
+
+5.4 Even More Options
+=====================
+
+
+File: working-with-static-sites.info,  Node: Adding a CMS,  Next: Deployment,  Prev: Adding Dynamic Elements,  Up: Top
+
+6 Adding a CMS
+**************
+
+* Menu:
+
+* CloudCannon::
+* Netlify CMS::
+* Jekyll Admin::
+* More Options::
+
+
+File: working-with-static-sites.info,  Node: CloudCannon,  Next: Netlify CMS,  Up: Adding a CMS
+
+6.1 CloudCannon
+===============
+
+* Menu:
+
+* Creating a Site on CloudCannon::
+* Editing a Site on CloudCannon::
+* Where to Go from Here::
+
+
+File: working-with-static-sites.info,  Node: Creating a Site on CloudCannon,  Next: Editing a Site on CloudCannon,  Up: CloudCannon
+
+6.1.1 Creating a Site on CloudCannon
+------------------------------------
+
+
+File: working-with-static-sites.info,  Node: Editing a Site on CloudCannon,  Next: Where to Go from Here,  Prev: Creating a Site on CloudCannon,  Up: CloudCannon
+
+6.1.2 Editing a Site on CloudCannon
+-----------------------------------
+
+
+File: working-with-static-sites.info,  Node: Where to Go from Here,  Prev: Editing a Site on CloudCannon,  Up: CloudCannon
+
+6.1.3 Where to Go from Here
+---------------------------
+
+
+File: working-with-static-sites.info,  Node: Netlify CMS,  Next: Jekyll Admin,  Prev: CloudCannon,  Up: Adding a CMS
+
+6.2 Netlify CMS
+===============
+
+* Menu:
+
+* Setting Up the Netlify CMS::
+* Where to Go from Here: Where to Go from Here 1.
+
+
+File: working-with-static-sites.info,  Node: Setting Up the Netlify CMS,  Next: Where to Go from Here 1,  Up: Netlify CMS
+
+6.2.1 Setting Up the Netlify CMS
+--------------------------------
+
+
+File: working-with-static-sites.info,  Node: Where to Go from Here 1,  Prev: Setting Up the Netlify CMS,  Up: Netlify CMS
+
+6.2.2 Where to Go from Here
+---------------------------
+
+
+File: working-with-static-sites.info,  Node: Jekyll Admin,  Next: More Options,  Prev: Netlify CMS,  Up: Adding a CMS
+
+6.3 Jekyll Admin
+================
+
+* Menu:
+
+* Setting Up Jekyll Admin::
+* Editing a Site in Jekyll Admin::
+* Where to Go from Here: Where to Go from Here 2.
+
+
+File: working-with-static-sites.info,  Node: Setting Up Jekyll Admin,  Next: Editing a Site in Jekyll Admin,  Up: Jekyll Admin
+
+6.3.1 Setting Up Jekyll Admin
+-----------------------------
+
+
+File: working-with-static-sites.info,  Node: Editing a Site in Jekyll Admin,  Next: Where to Go from Here 2,  Prev: Setting Up Jekyll Admin,  Up: Jekyll Admin
+
+6.3.2 Editing a Site in Jekyll Admin
+------------------------------------
+
+
+File: working-with-static-sites.info,  Node: Where to Go from Here 2,  Prev: Editing a Site in Jekyll Admin,  Up: Jekyll Admin
+
+6.3.3 Where to Go from Here
+---------------------------
+
+
+File: working-with-static-sites.info,  Node: More Options,  Prev: Jekyll Admin,  Up: Adding a CMS
+
+6.4 More Options
+================
+
+* Menu:
+
+* Forestry.io: Forestryio.
+* Lektor::
+* Headless CMS::
+
+
+File: working-with-static-sites.info,  Node: Forestryio,  Next: Lektor,  Up: More Options
+
+6.4.1 Forestry.io
+-----------------
+
+
+File: working-with-static-sites.info,  Node: Lektor,  Next: Headless CMS,  Prev: Forestryio,  Up: More Options
+
+6.4.2 Lektor
+------------
+
+
+File: working-with-static-sites.info,  Node: Headless CMS,  Prev: Lektor,  Up: More Options
+
+6.4.3 Headless CMS
+------------------
+
+
+File: working-with-static-sites.info,  Node: Deployment,  Next: Mirgrating to a Static Site,  Prev: Adding a CMS,  Up: Top
+
+7 Deployment
+************
+
+* Menu:
+
+* Plain Old Web Servers::
+* Cloud File Storage Providers::
+* Deploying with Surge::
+* Deploying with Netlify::
+* Summary::
+
+
+File: working-with-static-sites.info,  Node: Plain Old Web Servers,  Next: Cloud File Storage Providers,  Up: Deployment
+
+7.1 Plain Old Web Servers
+=========================
+
+
+File: working-with-static-sites.info,  Node: Cloud File Storage Providers,  Next: Deploying with Surge,  Prev: Plain Old Web Servers,  Up: Deployment
+
+7.2 Cloud File Storage Providers
+================================
+
+* Menu:
+
+* Hosting a Site on Amazon S3::
+* Hosting a Site on Google Cloud Storage::
+
+
+File: working-with-static-sites.info,  Node: Hosting a Site on Amazon S3,  Next: Hosting a Site on Google Cloud Storage,  Up: Cloud File Storage Providers
+
+7.2.1 Hosting a Site on Amazon S3
+---------------------------------
+
+
+File: working-with-static-sites.info,  Node: Hosting a Site on Google Cloud Storage,  Prev: Hosting a Site on Amazon S3,  Up: Cloud File Storage Providers
+
+7.2.2 Hosting a Site on Google Cloud Storage
+--------------------------------------------
+
+
+File: working-with-static-sites.info,  Node: Deploying with Surge,  Next: Deploying with Netlify,  Prev: Cloud File Storage Providers,  Up: Deployment
+
+7.3 Deploying with Surge
+========================
+
+
+File: working-with-static-sites.info,  Node: Deploying with Netlify,  Next: Summary,  Prev: Deploying with Surge,  Up: Deployment
+
+7.4 Deploying with Netlify
+==========================
+
+
+File: working-with-static-sites.info,  Node: Summary,  Prev: Deploying with Netlify,  Up: Deployment
+
+7.5 Summary
+===========
+
+
+File: working-with-static-sites.info,  Node: Mirgrating to a Static Site,  Next: Index,  Prev: Deployment,  Up: Top
+
+8 Mirgrating to a Static Site
+*****************************
+
+* Menu:
+
+* Migrating from WordPress to Jekyll::
+* Other Migration Options::
+* Go Forth and Be Static::
+
+
+File: working-with-static-sites.info,  Node: Migrating from WordPress to Jekyll,  Next: Other Migration Options,  Up: Mirgrating to a Static Site
+
+8.1 Migrating from WordPress to Jekyll
+======================================
+
+
+File: working-with-static-sites.info,  Node: Other Migration Options,  Next: Go Forth and Be Static,  Prev: Migrating from WordPress to Jekyll,  Up: Mirgrating to a Static Site
+
+8.2 Other Migration Options
+===========================
+
+* Menu:
+
+* Hugo::
+* Middleman::
+* Hexo::
+* Harp::
+* Many More Options Are Available::
+
+
+File: working-with-static-sites.info,  Node: Hugo,  Next: Middleman,  Up: Other Migration Options
+
+8.2.1 Hugo
+----------
+
+
+File: working-with-static-sites.info,  Node: Middleman,  Next: Hexo,  Prev: Hugo,  Up: Other Migration Options
+
+8.2.2 Middleman
+---------------
+
+
+File: working-with-static-sites.info,  Node: Hexo,  Next: Harp,  Prev: Middleman,  Up: Other Migration Options
+
+8.2.3 Hexo
+----------
+
+
+File: working-with-static-sites.info,  Node: Harp,  Next: Many More Options Are Available,  Prev: Hexo,  Up: Other Migration Options
+
+8.2.4 Harp
+----------
+
+
+File: working-with-static-sites.info,  Node: Many More Options Are Available,  Prev: Harp,  Up: Other Migration Options
+
+8.2.5 Many More Options Are Available
+-------------------------------------
+
+
+File: working-with-static-sites.info,  Node: Go Forth and Be Static,  Prev: Other Migration Options,  Up: Mirgrating to a Static Site
+
+8.3 Go Forth and Be Static
+==========================
+
+
+File: working-with-static-sites.info,  Node: Index,  Prev: Mirgrating to a Static Site,  Up: Top
+
+Index
+*****
+
+
+
+Tag Table:
+Node: Top484
+Node: Preface3643
+Node: What You Need to Know4445
+Node: Who this book is for4683
+Node: What's not covered5228
+Node: How this book is organized5583
+Node: Conventions6190
+Node: Code Examples6885
+Node: Why Static Sites7148
+Node: Benefits of Static Sites7354
+Node: Building a Basic Static Site7509
+Node: Welcome to Harp7906
+Node: Your First Harp Project8078
+Node: Working With Layouts and Partials8308
+Node: Working With Data8560
+Node: Generating a Site8774
+Node: Building Camden Grounds8978
+Node: Going Further With Harp9200
+Node: Building a Blog 19396
+Node: Blogging With Jekyll9936
+Node: Your First Jekyll Project10114
+Node: Writing a Post10325
+Node: A Quick Introduction to Liquid10524
+Node: Working With Layouts and Includes10763
+Node: Adding Additional Files11017
+Node: Working With Data 111240
+Node: Configuring Your Jekyll Site11446
+Node: Generating a Site 111670
+Node: Building a Blog11868
+Node: Going Further with Jekyll12061
+Node: Building a Documentation Site12246
+Node: Characteristics of a Documentation Site12638
+Node: Choosing a Generator for Your Documentation Site12908
+Node: Our Sample Documentation Site13234
+Node: Creating the Site13500
+Node: Installing Hugo13848
+Node: Generating the Initial Site Files14023
+Node: Configuring the Hugo Site14268
+Node: Adding Content14496
+Node: Creating the Layout14688
+Node: Going Further14856
+Node: Adding Dynamic Elements15017
+Node: Handling Forms15300
+Node: Wufoo Forms15562
+Node: Google Docs Forms15706
+Node: Formspree15880
+Node: Adding a Comment Form to Camden Grounds16066
+Node: Adding Comments16286
+Node: Working with Disqus16536
+Node: Adding Comments to The Cat Blog16719
+Node: Adding Search16926
+Node: Creating a Custom Search Engine17200
+Node: Adding a Custom Search Engine to a Real Site17430
+Node: Even More Options17686
+Node: Adding a CMS17849
+Node: CloudCannon18078
+Node: Creating a Site on CloudCannon18315
+Node: Editing a Site on CloudCannon18525
+Node: Where to Go from Here18763
+Node: Netlify CMS18946
+Node: Setting Up the Netlify CMS19190
+Node: Where to Go from Here 119382
+Node: Jekyll Admin19564
+Node: Setting Up Jekyll Admin19843
+Node: Editing a Site in Jekyll Admin20034
+Node: Where to Go from Here 220271
+Node: More Options20458
+Node: Forestryio20659
+Node: Lektor20789
+Node: Headless CMS20930
+Node: Deployment21064
+Node: Plain Old Web Servers21350
+Node: Cloud File Storage Providers21527
+Node: Hosting a Site on Amazon S321832
+Node: Hosting a Site on Google Cloud Storage22059
+Node: Deploying with Surge22308
+Node: Deploying with Netlify22513
+Node: Summary22701
+Node: Mirgrating to a Static Site22830
+Node: Migrating from WordPress to Jekyll23114
+Node: Other Migration Options23342
+Node: Hugo23666
+Node: Middleman23790
+Node: Hexo23937
+Node: Harp24074
+Node: Many More Options Are Available24233
+Node: Go Forth and Be Static24433
+Node: Index24625
+
+End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:
