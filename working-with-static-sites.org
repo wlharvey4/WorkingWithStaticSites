@@ -5,24 +5,166 @@
 #+AUTHOR: Raymond Camden
 #+SUBAUTHOR: Brian Rinaldo
 #+DATE: February 28, 2017
-#+MACRO: VERSION 0.0.1
+#+MACRO: VERSION 0.0.2
 #+MACRO: EDITION 0.1
 
 * Why Static Sites
 
+** Benefits of Static Sites
+
 * Building a Basic Static Site
+
+** Welcome to Harp
+
+** Your First Harp Project
+
+** Working With Layouts and Partials
+
+** Working With Data
+
+** Generating a Site
+
+** Building Camden Grounds
+
+** Going Further With Harp
 
 * Building a Blog
 
+** Blogging With Jekyll
+
+** Your First Jekyll Project
+
+** Writing a Post
+
+** A Quick Introduction to Liquid
+
+** Working With Layouts and Includes
+
+** Adding Additional Files
+
+** Working With Data
+
+** Configuring Your Jekyll Site
+
+** Generating a Site
+
+** Building a Blog
+
+** Going Further with Jekyll
+
 * Building a Documentation Site
+
+** Characteristics of a Documentation Site
+
+** Choosing a Generator for Your Documentation Site
+
+** Our Sample Documentation Site
+
+** Creating the Site
+
+*** Installing Hugo
+
+*** Generating the Initial Site Files
+
+*** Configuring the Hugo Site
+
+*** Adding Content
+
+*** Creating the Layout
+
+** Going Further
 
 * Adding Dynamic Elements
 
+** Handling Forms
+
+*** Wufoo Forms
+
+*** Google Docs Forms
+
+*** Formspree
+
+*** Adding a Comment Form to Camden Grounds
+
+** Adding Comments
+
+*** Working with Disqus
+
+*** Adding Comments to The Cat Blog
+
+** Adding Search
+
+*** Creating a Custom Search Engine
+
+*** Adding a Custom Search Engine to a Real Site
+
+** Even More Options
+
 * Adding a CMS
+
+** CloudCannon
+
+*** Creating a Site on CloudCannon
+
+*** Editing a Site on CloudCannon
+
+*** Where to Go from Here
+
+** Netlify CMS
+
+*** Setting Up the Netlify CMS
+
+*** Where to Go from Here
+
+** Jekyll Admin
+
+*** Setting Up Jekyll Admin
+
+*** Editing a Site in Jekyll Admin
+
+*** Where to Go from Here
+
+** More Options
+
+*** Forestry.io
+
+*** Lektor
+
+*** Headless CMS
 
 * Deployment
 
+** Plain Old Web Servers
+
+** Cloud File Storage Providers
+
+*** Hosting a Site on Amazon S3
+
+*** Hosting a Site on Google Cloud Storage
+
+** Deploying with Surge
+
+** Deploying with Netlify
+
+** Summary
+
 * Mirgrating to a Static Site
+
+** Migrating from WordPress to Jekyll
+
+** Other Migration Options
+
+*** Hugo
+
+*** Middleman
+
+*** Hexo
+
+*** Harp
+
+*** Many More Options Are Available
+
+** Go Forth and Be Static
 
 * Copying
   :PROPERTIES:
