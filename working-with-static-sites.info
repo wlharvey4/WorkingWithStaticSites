@@ -1,10 +1,12 @@
 This is working-with-static-sites.info, produced by makeinfo version 6.5
 from working-with-static-sites.texi.
 
-Based upon _Outline of Working With Static Sites_ by Raymond Camden &
-Brian Rinaldo (O’Reilly).  © 2017 Raymond Camden, 978-1-491-96094-3.
+Based upon _Working With Static Sites_ by Raymond Camden & Brian Rinaldo
+(O’Reilly).  © 2017 Raymond Camden, 978-1-491-96094-3.
 
-   This document: Produced: 2019-01-03 11:40 Version: 0.0.4 Edition: 0.1
+   This document was:
+
+   Produced: 2019-01-03 11:58 Version: 0.0.6 Edition: 0.1
 INFO-DIR-SECTION WebDev
 START-INFO-DIR-ENTRY
 * working-with-static-sites. Outline of Working With Static Sites by R Campden & B Rinaldo.
@@ -13,13 +15,15 @@ END-INFO-DIR-ENTRY
 
 File: working-with-static-sites.info,  Node: Top,  Next: Preface,  Up: (dir)
 
-Outline of Working With Static Sites
-************************************
+Working With Static Sites
+*************************
 
-Based upon _Outline of Working With Static Sites_ by Raymond Camden &
-Brian Rinaldo (O’Reilly).  © 2017 Raymond Camden, 978-1-491-96094-3.
+Based upon _Working With Static Sites_ by Raymond Camden & Brian Rinaldo
+(O’Reilly).  © 2017 Raymond Camden, 978-1-491-96094-3.
 
-   This document: Produced: 2019-01-03 11:40 Version: 0.0.4 Edition: 0.1
+   This document was:
+
+   Produced: 2019-01-03 11:58 Version: 0.0.6 Edition: 0.1
 
 * Menu:
 
@@ -888,94 +892,94 @@ Index
 
 
 Tag Table:
-Node: Top484
-Node: Preface3643
-Node: What You Need to Know4445
-Node: Who this book is for4683
-Node: What's not covered5228
-Node: How this book is organized5583
-Node: Conventions6190
-Node: Code Examples6885
-Node: Why Static Sites7148
-Node: Benefits of Static Sites7354
-Node: Building a Basic Static Site7509
-Node: Welcome to Harp7906
-Node: Your First Harp Project8078
-Node: Working With Layouts and Partials8308
-Node: Working With Data8560
-Node: Generating a Site8774
-Node: Building Camden Grounds8978
-Node: Going Further With Harp9200
-Node: Building a Blog 19396
-Node: Blogging With Jekyll9936
-Node: Your First Jekyll Project10114
-Node: Writing a Post10325
-Node: A Quick Introduction to Liquid10524
-Node: Working With Layouts and Includes10763
-Node: Adding Additional Files11017
-Node: Working With Data 111240
-Node: Configuring Your Jekyll Site11446
-Node: Generating a Site 111670
-Node: Building a Blog11868
-Node: Going Further with Jekyll12061
-Node: Building a Documentation Site12246
-Node: Characteristics of a Documentation Site12638
-Node: Choosing a Generator for Your Documentation Site12908
-Node: Our Sample Documentation Site13234
-Node: Creating the Site13500
-Node: Installing Hugo13848
-Node: Generating the Initial Site Files14023
-Node: Configuring the Hugo Site14268
-Node: Adding Content14496
-Node: Creating the Layout14688
-Node: Going Further14856
-Node: Adding Dynamic Elements15017
-Node: Handling Forms15300
-Node: Wufoo Forms15562
-Node: Google Docs Forms15706
-Node: Formspree15880
-Node: Adding a Comment Form to Camden Grounds16066
-Node: Adding Comments16286
-Node: Working with Disqus16536
-Node: Adding Comments to The Cat Blog16719
-Node: Adding Search16926
-Node: Creating a Custom Search Engine17200
-Node: Adding a Custom Search Engine to a Real Site17430
-Node: Even More Options17686
-Node: Adding a CMS17849
-Node: CloudCannon18078
-Node: Creating a Site on CloudCannon18315
-Node: Editing a Site on CloudCannon18525
-Node: Where to Go from Here18763
-Node: Netlify CMS18946
-Node: Setting Up the Netlify CMS19190
-Node: Where to Go from Here 119382
-Node: Jekyll Admin19564
-Node: Setting Up Jekyll Admin19843
-Node: Editing a Site in Jekyll Admin20034
-Node: Where to Go from Here 220271
-Node: More Options20458
-Node: Forestryio20659
-Node: Lektor20789
-Node: Headless CMS20930
-Node: Deployment21064
-Node: Plain Old Web Servers21350
-Node: Cloud File Storage Providers21527
-Node: Hosting a Site on Amazon S321832
-Node: Hosting a Site on Google Cloud Storage22059
-Node: Deploying with Surge22308
-Node: Deploying with Netlify22513
-Node: Summary22701
-Node: Mirgrating to a Static Site22830
-Node: Migrating from WordPress to Jekyll23114
-Node: Other Migration Options23342
-Node: Hugo23666
-Node: Middleman23790
-Node: Hexo23937
-Node: Harp24074
-Node: Many More Options Are Available24233
-Node: Go Forth and Be Static24433
-Node: Index24625
+Node: Top481
+Node: Preface3615
+Node: What You Need to Know4417
+Node: Who this book is for4655
+Node: What's not covered5200
+Node: How this book is organized5555
+Node: Conventions6162
+Node: Code Examples6857
+Node: Why Static Sites7120
+Node: Benefits of Static Sites7326
+Node: Building a Basic Static Site7481
+Node: Welcome to Harp7878
+Node: Your First Harp Project8050
+Node: Working With Layouts and Partials8280
+Node: Working With Data8532
+Node: Generating a Site8746
+Node: Building Camden Grounds8950
+Node: Going Further With Harp9172
+Node: Building a Blog 19368
+Node: Blogging With Jekyll9908
+Node: Your First Jekyll Project10086
+Node: Writing a Post10297
+Node: A Quick Introduction to Liquid10496
+Node: Working With Layouts and Includes10735
+Node: Adding Additional Files10989
+Node: Working With Data 111212
+Node: Configuring Your Jekyll Site11418
+Node: Generating a Site 111642
+Node: Building a Blog11840
+Node: Going Further with Jekyll12033
+Node: Building a Documentation Site12218
+Node: Characteristics of a Documentation Site12610
+Node: Choosing a Generator for Your Documentation Site12880
+Node: Our Sample Documentation Site13206
+Node: Creating the Site13472
+Node: Installing Hugo13820
+Node: Generating the Initial Site Files13995
+Node: Configuring the Hugo Site14240
+Node: Adding Content14468
+Node: Creating the Layout14660
+Node: Going Further14828
+Node: Adding Dynamic Elements14989
+Node: Handling Forms15272
+Node: Wufoo Forms15534
+Node: Google Docs Forms15678
+Node: Formspree15852
+Node: Adding a Comment Form to Camden Grounds16038
+Node: Adding Comments16258
+Node: Working with Disqus16508
+Node: Adding Comments to The Cat Blog16691
+Node: Adding Search16898
+Node: Creating a Custom Search Engine17172
+Node: Adding a Custom Search Engine to a Real Site17402
+Node: Even More Options17658
+Node: Adding a CMS17821
+Node: CloudCannon18050
+Node: Creating a Site on CloudCannon18287
+Node: Editing a Site on CloudCannon18497
+Node: Where to Go from Here18735
+Node: Netlify CMS18918
+Node: Setting Up the Netlify CMS19162
+Node: Where to Go from Here 119354
+Node: Jekyll Admin19536
+Node: Setting Up Jekyll Admin19815
+Node: Editing a Site in Jekyll Admin20006
+Node: Where to Go from Here 220243
+Node: More Options20430
+Node: Forestryio20631
+Node: Lektor20761
+Node: Headless CMS20902
+Node: Deployment21036
+Node: Plain Old Web Servers21322
+Node: Cloud File Storage Providers21499
+Node: Hosting a Site on Amazon S321804
+Node: Hosting a Site on Google Cloud Storage22031
+Node: Deploying with Surge22280
+Node: Deploying with Netlify22485
+Node: Summary22673
+Node: Mirgrating to a Static Site22802
+Node: Migrating from WordPress to Jekyll23086
+Node: Other Migration Options23314
+Node: Hugo23638
+Node: Middleman23762
+Node: Hexo23909
+Node: Harp24046
+Node: Many More Options Are Available24205
+Node: Go Forth and Be Static24405
+Node: Index24597
 
 End Tag Table
 

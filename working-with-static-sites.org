@@ -1,11 +1,11 @@
 # -*- mode: org; fill-column: 79; -*-
 
-#+TITLE: Outline of Working With Static Sites
+#+TITLE: Working With Static Sites
 #+SUBTITLE: Bringing the Power of Simplicity to Modern Sites
 #+AUTHOR: Raymond Camden
 #+SUBAUTHOR: Brian Rinaldo
 #+DATE: February 28, 2017
-#+MACRO: VERSION 0.0.5
+#+MACRO: VERSION 0.0.6
 #+MACRO: EDITION 0.1
 
 #+texinfo: @insertcopying
@@ -227,7 +227,8 @@
   Based upon /{{{title}}}/ by {{{author}}} & {{{subauthor}}} (O'Reilly).
   \copy 2017 {{{author}}}, 978-1-491-96094-3.
 
-  This document:
+  This document was:
+
   Produced: {{{time(%F %R)}}}
   Version: {{{VERSION}}}
   Edition: {{{EDITION}}}
@@ -236,6 +237,7 @@
   :Index:    t
   :END:
 * Export Settings                                                  :noexport:
+#+TEXINFO_PRINTED_TITLE: Outline of @i{Working With Static Sites}
 #+TEXINFO_CLASS: info
 #+TEXINFO_DIR_CATEGORY:WebDev
 #+TEXINFO_DIR_TITLE:working-with-static-sites
