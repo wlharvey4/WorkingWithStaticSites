@@ -1,0 +1,27 @@
+# -*- mode: org; fill-column: 79; -*-
+
+#+TITLE: Working With Static Sites
+#+SUBTITLE: Bringing the Power of Simplicity to Modern Sites
+#+AUTHOR: Raymond Camden and Brian Rinaldi
+#+DATE: 02-28-2017
+
+* About "{{{title}}}"
+
+This project outlines the little manual called *{{{title}}}*, written by
+{{{author}}} and published on {{{date}}}.
+
+** Subject Matter
+
+1. Benefits
+2. Harp
+3. Blogs with Jekyll
+4. Documentation Sites
+5. Dynamic Elements
+6. CMS's
+7. Deployment
+8. Migrating
+
+* Export Settings                                                  :noexport:
+  #+EXPORT_FILE_NAME: README.md
+  #+CONSTANTS: org-md-headline-style=setext
+  #+OPTIONS: toc:nil
