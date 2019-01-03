@@ -5,9 +5,59 @@
 #+AUTHOR: Raymond Camden
 #+SUBAUTHOR: Brian Rinaldo
 #+DATE: February 28, 2017
-#+MACRO: VERSION 0.0.2
+#+MACRO: VERSION 0.0.3
 #+MACRO: EDITION 0.1
 
+
+* Preface
+  :PROPERTIES:
+  :unnumbered: t
+  :END:
+  Because of the *benefits* static site generators offer, static sites
+  generators are used to run thousands of sites and are becoming the basis for
+  a broad *set of tools* that reach the casual developer and the nontechnical
+  content writer.
+
+  It can be difficult to know which tools to choose and how to get started.
+
+  *That is the problem the authors hope to address in writing this book.*  By
+   providing *common scenarios* and insights on how to address them, the
+   authors hope to make it easier for anyone to create static sites solutions
+   and take advantage of the speed, flexibilty, and security they offer.
+
+** What You Need to Know
+
+*** Who this book is for
+    - This book is for web developers who are looking for a simpler way to
+      build and deploy websites.
+    - For developers with experience with dynamic app servers (like PHP,
+      Node.js, and ColdFusion), this book will present a simpler alternative.
+    - For developers who are still working with simple websites but need a way
+      to make them more powerful.
+*** What's not covered
+    - This book focuses on static site generators that work from the command
+      line.
+    - Desktop tools that have similar features are not covered.
+*** How this book is organized
+    - Begins by describing why you would want to use static sites.
+    - Subsequent chapters focus oni a specific type of site and uses this as a
+      way of introducing different static site generators.
+    - How to build a site
+    - More advanced topics, such as adding dynamic elements back in,
+    - Working with CMS
+    - How to deploy and host a site
+    - How to migrate from a dynamic site to a static one
+** Conventions
+   - /Italic/ :: Indicates new terms, URLs, email addresses, filenames, and
+                 file extensions
+   - ~Constant Width~ :: Used for program listings, as well as within
+        paragraphs to refer to program elements such as variables or function
+        names, databases, data types, environment variables, statements, and
+        keywords
+   - {{{command(Command)}}} :: Shows commands or other text that should be
+        typed literally by the user
+   - {{{samp(Sample)}}} :: Shows text that should be replaced with
+        user-supplied values or by values determined by context.
 * Why Static Sites
 
 ** Benefits of Static Sites
@@ -184,4 +234,5 @@
 #+TEXINFO_DIR_CATEGORY:WebDev
 #+TEXINFO_DIR_TITLE:working-with-static-sites
 #+TEXINFO_DIR_DESC:Outline of Working With Static Sites by R Campden & B Rinaldo
-
+#+MACRO: command @@texinfo:@command{*@@$1@@texinfo:*}@@
+#+MACRO: samp @@texinfo:@samp{@@<$1>@@texinfo:}@@
