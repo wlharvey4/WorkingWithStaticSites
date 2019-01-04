@@ -5,7 +5,7 @@
 #+AUTHOR: Raymond Camden
 #+SUBAUTHOR: Brian Rinaldo
 #+DATE: February 28, 2017
-#+MACRO: VERSION 0.0.6
+#+MACRO: VERSION 0.0.7
 #+MACRO: EDITION 0.1
 
 #+texinfo: @insertcopying
@@ -63,8 +63,117 @@
    Supplemental material (code examples, exercises, etc.) is available for
    download at [[https://github.com/cfjedimaster/Static-Sites-Book]]
 * Why Static Sites
+  Why would static sites be a worthwhile option for today's web?  This chapter
+  will explore some of the benefits of static sites before diving into how the
+  changing technology behind static sites (i.e., static site generators---the
+  topic of this book) are making them viable again.
 
 ** Benefits of Static Sites
+   Of the many reasons that static sites are coming back into fashion, two
+   stand out:
+
+   1. Static sites are /fast/
+   2. Statis sites are /secure/
+
+** Static Sites are /Fast/
+   #+cindex: performance, website
+   #+cindex: website performance
+   #+cindex: abandon, webiste loading
+   Website performance is critical.  Users tend to abandon sites that take
+   longer than three seconds to load (with a load time of under two seconds
+   being considered optimal for mobile).  Achieving this level of website
+   performance can be difficult.
+
+   #+cindex: bottlenecks, webiste loading
+   #+cindex: server-side rendering, bottleneck
+   #+cindex: cache, website
+   #+cindex: Content Delivery Network (CDN)
+   #+cindex: CDN
+   #+cindex: dynamic rendering, bottleneck
+   #+cindex: points of failure, website loading
+   By their very nature, static sites load extremely fast.  This is because
+   every visitor is served the exact same HTML without the bottlenecks caused
+   by a server-side language, database, or any kind of dynamic rendering.
+   Plus, static sites are extremely easy to cache and serve via a content
+   delivery network (CDN), making  them even faster for the end user.  In
+   addition, once you eliminate dynamic rendering from a database, you've
+   eliminated numerous points of failure that often cause sites to be
+   unresponsive or completely fail.
+
+** Static Sites are /Secure/
+   #+cindex: vulnerabilities, websites
+   #+cindex: website vulnerabilities
+   With a static site, there is no database to breach and no server-side
+   platform or CMS with unpatched vulnerabilities.  Static sites will not
+   eliminate every vulnerability, but they narrow the window of opportunities
+   available to any hacker and limit the amount of potential damage if a hacker
+   does gain access.
+
+** Other Benefits
+   There are other benefits of static sites as well, including:
+
+   #+cindex: flexible, benefit
+   #+cindex: benefits, flexible
+   - Flexibility ::
+                    You are not working within a CMS framework, so there are no
+                    limitations on how you can buidl your site.
+     #+cindex: hosting, benefit
+     #+cindex: benefits, hosting
+   - Hosting ::
+                Because there's no need for a database or server-side language
+                support, hosting a static site can be anywhere from inexpensive
+                to completely free, depending on your needs.
+     #+cindex: versioning, benefit
+     #+cindex: benefits, versioning
+   - Versioning ::
+                   Since a static site is made up of static files, it is
+                   extremely easy to track and coordinate changes using version
+                   control systems like Git and GitHub.
+
+
+   #+cindex: static sites, what works
+   With all of these benefits, why wouldn't you choose to use a static site?
+   Well, only certain kinds of sites can realisticly work as static only.
+
+** What Kind of Sites Can Go Static
+   #+cindex: static sites, drawbacks
+   #+cindex: drawbacks, static sites
+   There are drawbacks to using static sites.
+
+     #+cindex: dynamic data, drawback
+     #+cindex: drawbacks, dynamic data
+   - While some amount of dynamic data is possible on a static site that uses
+     external API calls or third-party services, a static site is simply not
+     suitable if you require large amounts of dynamic data or content
+     personalization.
+     #+cindex: learning curve, steep, drawback
+     #+cindex: drawbacks, steep learning curve
+   - From a development and content contribution standpoint, static site
+     generators (i.e., the tools frequently used to build static sites) can
+     have a steep learning curve.
+     #+cindex: deployment, drawback
+     #+cindex: drawbacks, complex deployment
+   - Deployment can be complex, making static sites less than ideal for content
+     that changes frequently.
+
+
+   #+cindex: static sites,what works
+   #+cindex: content focused, static sites
+   #+cindex: user interaction, low, static sites
+   Sites that tend to work best as static sites are content-focused,
+   infrequently updated (once or twice a day at most), and do not require a
+   high degree of user interaction or personalization.
+
+   Here are some examples of types of sites that work well as static sites:
+
+   #+cindex: blog, static site
+   #+cindex: Disqus, service
+   #+cindex: services, third party, Disqus
+   - Blogs ::
+              This is the most common use case; many static site generators
+              default to a blog template.  Blogs are content-focused by design
+              and, in many cases, user interaction is limited to comments,
+              where services like [[https://disqus.com/][Disqus]] con fill the requirement.
 
 * Building a Basic Static Site
 

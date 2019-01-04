@@ -6,7 +6,7 @@ Based upon _Working With Static Sites_ by Raymond Camden & Brian Rinaldo
 
    This document was:
 
-   Produced: 2019-01-03 11:58 Version: 0.0.6 Edition: 0.1
+   Produced: 2019-01-04 10:37 Version: 0.0.7 Edition: 0.1
 INFO-DIR-SECTION WebDev
 START-INFO-DIR-ENTRY
 * working-with-static-sites. Outline of Working With Static Sites by R Campden & B Rinaldo.
@@ -23,7 +23,7 @@ Based upon _Working With Static Sites_ by Raymond Camden & Brian Rinaldo
 
    This document was:
 
-   Produced: 2019-01-03 11:58 Version: 0.0.6 Edition: 0.1
+   Produced: 2019-01-04 10:37 Version: 0.0.7 Edition: 0.1
 
 * Menu:
 
@@ -55,6 +55,10 @@ What You Need to Know
 Why Static Sites
 
 * Benefits of Static Sites::
+* Static Sites are _Fast_::
+* Static Sites are _Secure_::
+* Other Benefits::
+* What Kind of Sites Can Go Static::
 
 Building a Basic Static Site
 
@@ -290,15 +294,118 @@ File: working-with-static-sites.info,  Node: Why Static Sites,  Next: Building a
 1 Why Static Sites
 ******************
 
+Why would static sites be a worthwhile option for today’s web?  This
+chapter will explore some of the benefits of static sites before diving
+into how the changing technology behind static sites (i.e., static site
+generators—the topic of this book) are making them viable again.
+
 * Menu:
 
 * Benefits of Static Sites::
+* Static Sites are _Fast_::
+* Static Sites are _Secure_::
+* Other Benefits::
+* What Kind of Sites Can Go Static::
 
 
-File: working-with-static-sites.info,  Node: Benefits of Static Sites,  Up: Why Static Sites
+File: working-with-static-sites.info,  Node: Benefits of Static Sites,  Next: Static Sites are _Fast_,  Up: Why Static Sites
 
 1.1 Benefits of Static Sites
 ============================
+
+Of the many reasons that static sites are coming back into fashion, two
+stand out:
+
+  1. Static sites are _fast_
+  2. Statis sites are _secure_
+
+
+File: working-with-static-sites.info,  Node: Static Sites are _Fast_,  Next: Static Sites are _Secure_,  Prev: Benefits of Static Sites,  Up: Why Static Sites
+
+1.2 Static Sites are _Fast_
+===========================
+
+Website performance is critical.  Users tend to abandon sites that take
+longer than three seconds to load (with a load time of under two seconds
+being considered optimal for mobile).  Achieving this level of website
+performance can be difficult.
+
+   By their very nature, static sites load extremely fast.  This is
+because every visitor is served the exact same HTML without the
+bottlenecks caused by a server-side language, database, or any kind of
+dynamic rendering.  Plus, static sites are extremely easy to cache and
+serve via a content delivery network (CDN), making them even faster for
+the end user.  In addition, once you eliminate dynamic rendering from a
+database, you’ve eliminated numerous points of failure that often cause
+sites to be unresponsive or completely fail.
+
+
+File: working-with-static-sites.info,  Node: Static Sites are _Secure_,  Next: Other Benefits,  Prev: Static Sites are _Fast_,  Up: Why Static Sites
+
+1.3 Static Sites are _Secure_
+=============================
+
+With a static site, there is no database to breach and no server-side
+platform or CMS with unpatched vulnerabilities.  Static sites will not
+eliminate every vulnerability, but they narrow the window of
+opportunities available to any hacker and limit the amount of potential
+damage if a hacker does gain access.
+
+
+File: working-with-static-sites.info,  Node: Other Benefits,  Next: What Kind of Sites Can Go Static,  Prev: Static Sites are _Secure_,  Up: Why Static Sites
+
+1.4 Other Benefits
+==================
+
+There are other benefits of static sites as well, including:
+
+Flexibility
+     You are not working within a CMS framework, so there are no
+     limitations on how you can buidl your site.
+Hosting
+     Because there’s no need for a database or server-side language
+     support, hosting a static site can be anywhere from inexpensive to
+     completely free, depending on your needs.
+Versioning
+     Since a static site is made up of static files, it is extremely
+     easy to track and coordinate changes using version control systems
+     like Git and GitHub.
+
+   With all of these benefits, why wouldn’t you choose to use a static
+site?  Well, only certain kinds of sites can realisticly work as static
+only.
+
+
+File: working-with-static-sites.info,  Node: What Kind of Sites Can Go Static,  Prev: Other Benefits,  Up: Why Static Sites
+
+1.5 What Kind of Sites Can Go Static
+====================================
+
+There are drawbacks to using static sites.
+
+   • While some amount of dynamic data is possible on a static site that
+     uses external API calls or third-party services, a static site is
+     simply not suitable if you require large amounts of dynamic data or
+     content personalization.
+   • From a development and content contribution standpoint, static site
+     generators (i.e., the tools frequently used to build static sites)
+     can have a steep learning curve.
+   • Deployment can be complex, making static sites less than ideal for
+     content that changes frequently.
+
+   Sites that tend to work best as static sites are content-focused,
+infrequently updated (once or twice a day at most), and do not require a
+high degree of user interaction or personalization.
+
+   Here are some examples of types of sites that work well as static
+sites:
+
+Blogs
+     This is the most common use case; many static site generators
+     default to a blog template.  Blogs are content-focused by design
+     and, in many cases, user interaction is limited to comments, where
+     services like Disqus (https://disqus.com/) con fill the
+     requirement.
 
 
 File: working-with-static-sites.info,  Node: Building a Basic Static Site,  Next: Building a Blog 1,  Prev: Why Static Sites,  Up: Top
@@ -893,93 +1000,97 @@ Index
 
 Tag Table:
 Node: Top481
-Node: Preface3615
-Node: What You Need to Know4417
-Node: Who this book is for4655
-Node: What's not covered5200
-Node: How this book is organized5555
-Node: Conventions6162
-Node: Code Examples6857
-Node: Why Static Sites7120
-Node: Benefits of Static Sites7326
-Node: Building a Basic Static Site7481
-Node: Welcome to Harp7878
-Node: Your First Harp Project8050
-Node: Working With Layouts and Partials8280
-Node: Working With Data8532
-Node: Generating a Site8746
-Node: Building Camden Grounds8950
-Node: Going Further With Harp9172
-Node: Building a Blog 19368
-Node: Blogging With Jekyll9908
-Node: Your First Jekyll Project10086
-Node: Writing a Post10297
-Node: A Quick Introduction to Liquid10496
-Node: Working With Layouts and Includes10735
-Node: Adding Additional Files10989
-Node: Working With Data 111212
-Node: Configuring Your Jekyll Site11418
-Node: Generating a Site 111642
-Node: Building a Blog11840
-Node: Going Further with Jekyll12033
-Node: Building a Documentation Site12218
-Node: Characteristics of a Documentation Site12610
-Node: Choosing a Generator for Your Documentation Site12880
-Node: Our Sample Documentation Site13206
-Node: Creating the Site13472
-Node: Installing Hugo13820
-Node: Generating the Initial Site Files13995
-Node: Configuring the Hugo Site14240
-Node: Adding Content14468
-Node: Creating the Layout14660
-Node: Going Further14828
-Node: Adding Dynamic Elements14989
-Node: Handling Forms15272
-Node: Wufoo Forms15534
-Node: Google Docs Forms15678
-Node: Formspree15852
-Node: Adding a Comment Form to Camden Grounds16038
-Node: Adding Comments16258
-Node: Working with Disqus16508
-Node: Adding Comments to The Cat Blog16691
-Node: Adding Search16898
-Node: Creating a Custom Search Engine17172
-Node: Adding a Custom Search Engine to a Real Site17402
-Node: Even More Options17658
-Node: Adding a CMS17821
-Node: CloudCannon18050
-Node: Creating a Site on CloudCannon18287
-Node: Editing a Site on CloudCannon18497
-Node: Where to Go from Here18735
-Node: Netlify CMS18918
-Node: Setting Up the Netlify CMS19162
-Node: Where to Go from Here 119354
-Node: Jekyll Admin19536
-Node: Setting Up Jekyll Admin19815
-Node: Editing a Site in Jekyll Admin20006
-Node: Where to Go from Here 220243
-Node: More Options20430
-Node: Forestryio20631
-Node: Lektor20761
-Node: Headless CMS20902
-Node: Deployment21036
-Node: Plain Old Web Servers21322
-Node: Cloud File Storage Providers21499
-Node: Hosting a Site on Amazon S321804
-Node: Hosting a Site on Google Cloud Storage22031
-Node: Deploying with Surge22280
-Node: Deploying with Netlify22485
-Node: Summary22673
-Node: Mirgrating to a Static Site22802
-Node: Migrating from WordPress to Jekyll23086
-Node: Other Migration Options23314
-Node: Hugo23638
-Node: Middleman23762
-Node: Hexo23909
-Node: Harp24046
-Node: Many More Options Are Available24205
-Node: Go Forth and Be Static24405
-Node: Index24597
+Node: Preface3729
+Node: What You Need to Know4531
+Node: Who this book is for4769
+Node: What's not covered5314
+Node: How this book is organized5669
+Node: Conventions6276
+Node: Code Examples6971
+Node: Why Static Sites7234
+Node: Benefits of Static Sites7837
+Node: Static Sites are _Fast_8169
+Node: Static Sites are _Secure_9173
+Node: Other Benefits9698
+Node: What Kind of Sites Can Go Static10614
+Node: Building a Basic Static Site11974
+Node: Welcome to Harp12371
+Node: Your First Harp Project12543
+Node: Working With Layouts and Partials12773
+Node: Working With Data13025
+Node: Generating a Site13239
+Node: Building Camden Grounds13443
+Node: Going Further With Harp13665
+Node: Building a Blog 113861
+Node: Blogging With Jekyll14401
+Node: Your First Jekyll Project14579
+Node: Writing a Post14790
+Node: A Quick Introduction to Liquid14989
+Node: Working With Layouts and Includes15228
+Node: Adding Additional Files15482
+Node: Working With Data 115705
+Node: Configuring Your Jekyll Site15911
+Node: Generating a Site 116135
+Node: Building a Blog16333
+Node: Going Further with Jekyll16526
+Node: Building a Documentation Site16711
+Node: Characteristics of a Documentation Site17103
+Node: Choosing a Generator for Your Documentation Site17373
+Node: Our Sample Documentation Site17699
+Node: Creating the Site17965
+Node: Installing Hugo18313
+Node: Generating the Initial Site Files18488
+Node: Configuring the Hugo Site18733
+Node: Adding Content18961
+Node: Creating the Layout19153
+Node: Going Further19321
+Node: Adding Dynamic Elements19482
+Node: Handling Forms19765
+Node: Wufoo Forms20027
+Node: Google Docs Forms20171
+Node: Formspree20345
+Node: Adding a Comment Form to Camden Grounds20531
+Node: Adding Comments20751
+Node: Working with Disqus21001
+Node: Adding Comments to The Cat Blog21184
+Node: Adding Search21391
+Node: Creating a Custom Search Engine21665
+Node: Adding a Custom Search Engine to a Real Site21895
+Node: Even More Options22151
+Node: Adding a CMS22314
+Node: CloudCannon22543
+Node: Creating a Site on CloudCannon22780
+Node: Editing a Site on CloudCannon22990
+Node: Where to Go from Here23228
+Node: Netlify CMS23411
+Node: Setting Up the Netlify CMS23655
+Node: Where to Go from Here 123847
+Node: Jekyll Admin24029
+Node: Setting Up Jekyll Admin24308
+Node: Editing a Site in Jekyll Admin24499
+Node: Where to Go from Here 224736
+Node: More Options24923
+Node: Forestryio25124
+Node: Lektor25254
+Node: Headless CMS25395
+Node: Deployment25529
+Node: Plain Old Web Servers25815
+Node: Cloud File Storage Providers25992
+Node: Hosting a Site on Amazon S326297
+Node: Hosting a Site on Google Cloud Storage26524
+Node: Deploying with Surge26773
+Node: Deploying with Netlify26978
+Node: Summary27166
+Node: Mirgrating to a Static Site27295
+Node: Migrating from WordPress to Jekyll27579
+Node: Other Migration Options27807
+Node: Hugo28131
+Node: Middleman28255
+Node: Hexo28402
+Node: Harp28539
+Node: Many More Options Are Available28698
+Node: Go Forth and Be Static28898
+Node: Index29090
 
 End Tag Table
 
