@@ -6,7 +6,7 @@ Based upon _Working With Static Sites_ by Raymond Camden & Brian Rinaldo
 
    This document was:
 
-   Produced: 2019-01-04 10:37 Version: 0.0.7 Edition: 0.1
+   Produced: 2019-01-05 11:34 Version: 0.0.7 Edition: 0.1
 INFO-DIR-SECTION WebDev
 START-INFO-DIR-ENTRY
 * working-with-static-sites. Outline of Working With Static Sites by R Campden & B Rinaldo.
@@ -23,7 +23,7 @@ Based upon _Working With Static Sites_ by Raymond Camden & Brian Rinaldo
 
    This document was:
 
-   Produced: 2019-01-04 10:37 Version: 0.0.7 Edition: 0.1
+   Produced: 2019-01-05 11:34 Version: 0.0.7 Edition: 0.1
 
 * Menu:
 
@@ -59,6 +59,12 @@ Why Static Sites
 * Static Sites are _Secure_::
 * Other Benefits::
 * What Kind of Sites Can Go Static::
+* What Are Static Sites::
+
+What Are Static Sites
+
+* How to Choose a Static Site Generator::
+* Going Forward::
 
 Building a Basic Static Site
 
@@ -306,6 +312,7 @@ generators—the topic of this book) are making them viable again.
 * Static Sites are _Secure_::
 * Other Benefits::
 * What Kind of Sites Can Go Static::
+* What Are Static Sites::
 
 
 File: working-with-static-sites.info,  Node: Benefits of Static Sites,  Next: Static Sites are _Fast_,  Up: Why Static Sites
@@ -376,7 +383,7 @@ site?  Well, only certain kinds of sites can realisticly work as static
 only.
 
 
-File: working-with-static-sites.info,  Node: What Kind of Sites Can Go Static,  Prev: Other Benefits,  Up: Why Static Sites
+File: working-with-static-sites.info,  Node: What Kind of Sites Can Go Static,  Next: What Are Static Sites,  Prev: Other Benefits,  Up: Why Static Sites
 
 1.5 What Kind of Sites Can Go Static
 ====================================
@@ -406,6 +413,162 @@ Blogs
      and, in many cases, user interaction is limited to comments, where
      services like Disqus (https://disqus.com/) con fill the
      requirement.
+
+
+File: working-with-static-sites.info,  Node: What Are Static Sites,  Prev: What Kind of Sites Can Go Static,  Up: Why Static Sites
+
+1.6 What Are Static Sites
+=========================
+
+Static site generators solve the pain of building and maintaining a
+static site.  The fundamentals of a static site generator are extremely
+simple: they take in dynamic content and layout and output static HTML,
+CSS, and JavaScript files.  There are literally hundreds of static site
+generators (<https://staticsitegenerators.net/>) but essentially they
+all do exactly the same thing and, for the most part, function
+similarly.
+
+   • lightweight markup language (‘Markdown .md’)
+   • a templating language (‘Handlebars {{}}’)
+   • data/metadata (‘Yaml .yml’)
+   • CSS preprocessor (‘Sass .scss’)
+   • a compile-to-JavaScript language (‘CoffeScript .coffee’)
+   • ⇓
+   • S S G ⇒ ‘.html .css .js’
+
+What SSG’s Have In Common
+=========================
+
+Templating language
+     Use one or more, such as Liquid, Handlebars, Jade.  This is a key
+     part of any static site generator, as it allows one to build a
+     layout/theme for a site and plug in dynamic content during a build.
+Markup language
+     Use one or more (<http://bit.ly/2lrz8JP>) such as Markdown,
+     AsciiDoc, reStructuredText.  Using a lightweight markup language
+     makes it quicker and easier to write content using any text editor.
+Command line
+     Are run via the command line.
+Local development server
+     This allows you to develop and test locally befdore building and
+     deploying your changes.  Typically, the tool watches the folder
+     where the site files are being edited and recompiles the site
+     on-the-fly as you edit them.
+Extensible
+     In most cases, if your static site generator doesn’t support a
+     feature or language that you need, it has a build-in plugin
+     architecture that allows you to add that in (provided you can code
+     in the language the tool is built upon).
+Support file-based data formats
+     e.g.  YAML, TOML, JSON. File-based data allows you to structure any
+     type of data independent of its display.
+
+   The author has published a report called ‘Static Site Generators:
+Modern Tools for Static Web Development (O’Reilly 2015)’.  The report
+focuses on the history of static sites, how they differ from dynamic
+sites built using content management systems or blog engines, and gives
+some details about the available static site generators.
+
+   The report is free and can be downloaded from O’Reilly here:
+<http://oreil.ly/2l4fL8j>.
+
+* Menu:
+
+* How to Choose a Static Site Generator::
+* Going Forward::
+
+
+File: working-with-static-sites.info,  Node: How to Choose a Static Site Generator,  Next: Going Forward,  Up: What Are Static Sites
+
+1.6.1 How to Choose a Static Site Generator
+-------------------------------------------
+
+So now with a basic understanding of what a static site generator is,
+how can one use them?  The first issue to resolve is trying to figure
+out which one to use.  This isn’t an easy decision, since there are in
+excess of 445 different available options.  (*note List of SSG’s:
+org59e233b.).  Even after filtering out projects that haven’t been
+updated recently, there are still hundreds of potential tools.
+
+How To Choose the Right SSG?
+----------------------------
+
+The relative “health” of the project
+     How recently has it been updated, and how big and active is the
+     community?
+How good is the documentation
+     Many of the hundreds of static site generators (probably a
+     majority) are not well documented.  This can cause you to spend far
+     more time than necessary building your site and lead to needless
+     frustration.  Review the documentation carefully before committing
+     to a project and don’t assume that being able to read the source is
+     sufficient.
+Does it support my requirements
+     This can involve very specific requirements (an importer or
+     specific plugin) or a more general ability to meet amy needs (is it
+     even extenible?).
+Is the language it is built upon important to me
+     For most, a static site generator will work well out of the box.
+     But in some cases it might be necessary to customize your generator
+     via plugins or even contributions to the source code.  In these
+     cases, knowing the underlying language can be important.
+
+
+File: working-with-static-sites.info,  Node: Going Forward,  Prev: How to Choose a Static Site Generator,  Up: What Are Static Sites
+
+1.6.2 Going Forward
+-------------------
+
+The next chapters will look at some of the more mature and popular
+options for developing static sites, such as:
+   • Jekyll (Ruby)
+   • Hugo (Go)
+   • Harp (JavaScript)
+
+   Not only does each have a different underlying language, which may be
+an important consideration, but each also has its own pros and cons.
+The chapters will look at building some common use cases:
+   • a basic informational site
+   • a blog
+   • documentation site
+
+using these tools in ways that take advantage of their relative merits.
+
+Dynamic Features
+================
+
+Once the basics of the static site have been built, there needs to be
+added some dynamic features, like comments on a blog post, or a site
+search.  Or, if we have to support content contributors that aren’t
+comfortable writing posts in Markdown via a text editor, we might want
+to add a CMS-like backend to the site to allow for easy editing.  The
+following will take a look at multiple solutions that solve each of
+these problems.
+
+Deployment
+==========
+
+After the site is complete, it’s time to deploy it.  While this can be
+as easy as simply FTPing files onto a server, in most cases you’ll want
+to automate the process or take advantage of services that can manage
+the build process for you.  The following chapters will explore a
+variety of tools and services that can ease the deployment process.
+
+Migration
+=========
+
+Finally, you may be evaluating static sites as an option to replace an
+existing site that uses a tool like WorkPress or some other CMS. For
+these cases, the chapters will dive into tools that ease the process of
+migrating to a static site generator from a CMS by bringing over
+existing content.
+
+SSG Ecosystem
+=============
+
+In the end, this book hopes to provide you with a broad overview of the
+existing statit site generator ecosystem, while diving into the actual
+implementation details of how to accomplish your goals with these tools.
 
 
 File: working-with-static-sites.info,  Node: Building a Basic Static Site,  Next: Building a Blog 1,  Prev: Why Static Sites,  Up: Top
@@ -1000,97 +1163,101 @@ Index
 
 Tag Table:
 Node: Top481
-Node: Preface3729
-Node: What You Need to Know4531
-Node: Who this book is for4769
-Node: What's not covered5314
-Node: How this book is organized5669
-Node: Conventions6276
-Node: Code Examples6971
-Node: Why Static Sites7234
-Node: Benefits of Static Sites7837
-Node: Static Sites are _Fast_8169
-Node: Static Sites are _Secure_9173
-Node: Other Benefits9698
-Node: What Kind of Sites Can Go Static10614
-Node: Building a Basic Static Site11974
-Node: Welcome to Harp12371
-Node: Your First Harp Project12543
-Node: Working With Layouts and Partials12773
-Node: Working With Data13025
-Node: Generating a Site13239
-Node: Building Camden Grounds13443
-Node: Going Further With Harp13665
-Node: Building a Blog 113861
-Node: Blogging With Jekyll14401
-Node: Your First Jekyll Project14579
-Node: Writing a Post14790
-Node: A Quick Introduction to Liquid14989
-Node: Working With Layouts and Includes15228
-Node: Adding Additional Files15482
-Node: Working With Data 115705
-Node: Configuring Your Jekyll Site15911
-Node: Generating a Site 116135
-Node: Building a Blog16333
-Node: Going Further with Jekyll16526
-Node: Building a Documentation Site16711
-Node: Characteristics of a Documentation Site17103
-Node: Choosing a Generator for Your Documentation Site17373
-Node: Our Sample Documentation Site17699
-Node: Creating the Site17965
-Node: Installing Hugo18313
-Node: Generating the Initial Site Files18488
-Node: Configuring the Hugo Site18733
-Node: Adding Content18961
-Node: Creating the Layout19153
-Node: Going Further19321
-Node: Adding Dynamic Elements19482
-Node: Handling Forms19765
-Node: Wufoo Forms20027
-Node: Google Docs Forms20171
-Node: Formspree20345
-Node: Adding a Comment Form to Camden Grounds20531
-Node: Adding Comments20751
-Node: Working with Disqus21001
-Node: Adding Comments to The Cat Blog21184
-Node: Adding Search21391
-Node: Creating a Custom Search Engine21665
-Node: Adding a Custom Search Engine to a Real Site21895
-Node: Even More Options22151
-Node: Adding a CMS22314
-Node: CloudCannon22543
-Node: Creating a Site on CloudCannon22780
-Node: Editing a Site on CloudCannon22990
-Node: Where to Go from Here23228
-Node: Netlify CMS23411
-Node: Setting Up the Netlify CMS23655
-Node: Where to Go from Here 123847
-Node: Jekyll Admin24029
-Node: Setting Up Jekyll Admin24308
-Node: Editing a Site in Jekyll Admin24499
-Node: Where to Go from Here 224736
-Node: More Options24923
-Node: Forestryio25124
-Node: Lektor25254
-Node: Headless CMS25395
-Node: Deployment25529
-Node: Plain Old Web Servers25815
-Node: Cloud File Storage Providers25992
-Node: Hosting a Site on Amazon S326297
-Node: Hosting a Site on Google Cloud Storage26524
-Node: Deploying with Surge26773
-Node: Deploying with Netlify26978
-Node: Summary27166
-Node: Mirgrating to a Static Site27295
-Node: Migrating from WordPress to Jekyll27579
-Node: Other Migration Options27807
-Node: Hugo28131
-Node: Middleman28255
-Node: Hexo28402
-Node: Harp28539
-Node: Many More Options Are Available28698
-Node: Go Forth and Be Static28898
-Node: Index29090
+Node: Preface3839
+Node: What You Need to Know4641
+Node: Who this book is for4879
+Node: What's not covered5424
+Node: How this book is organized5779
+Node: Conventions6386
+Node: Code Examples7081
+Node: Why Static Sites7344
+Node: Benefits of Static Sites7973
+Node: Static Sites are _Fast_8305
+Node: Static Sites are _Secure_9309
+Node: Other Benefits9834
+Node: What Kind of Sites Can Go Static10750
+Node: What Are Static Sites12140
+Ref: org59e233b12621
+Node: How to Choose a Static Site Generator14813
+Node: Going Forward16555
+Node: Building a Basic Static Site18665
+Node: Welcome to Harp19062
+Node: Your First Harp Project19234
+Node: Working With Layouts and Partials19464
+Node: Working With Data19716
+Node: Generating a Site19930
+Node: Building Camden Grounds20134
+Node: Going Further With Harp20356
+Node: Building a Blog 120552
+Node: Blogging With Jekyll21092
+Node: Your First Jekyll Project21270
+Node: Writing a Post21481
+Node: A Quick Introduction to Liquid21680
+Node: Working With Layouts and Includes21919
+Node: Adding Additional Files22173
+Node: Working With Data 122396
+Node: Configuring Your Jekyll Site22602
+Node: Generating a Site 122826
+Node: Building a Blog23024
+Node: Going Further with Jekyll23217
+Node: Building a Documentation Site23402
+Node: Characteristics of a Documentation Site23794
+Node: Choosing a Generator for Your Documentation Site24064
+Node: Our Sample Documentation Site24390
+Node: Creating the Site24656
+Node: Installing Hugo25004
+Node: Generating the Initial Site Files25179
+Node: Configuring the Hugo Site25424
+Node: Adding Content25652
+Node: Creating the Layout25844
+Node: Going Further26012
+Node: Adding Dynamic Elements26173
+Node: Handling Forms26456
+Node: Wufoo Forms26718
+Node: Google Docs Forms26862
+Node: Formspree27036
+Node: Adding a Comment Form to Camden Grounds27222
+Node: Adding Comments27442
+Node: Working with Disqus27692
+Node: Adding Comments to The Cat Blog27875
+Node: Adding Search28082
+Node: Creating a Custom Search Engine28356
+Node: Adding a Custom Search Engine to a Real Site28586
+Node: Even More Options28842
+Node: Adding a CMS29005
+Node: CloudCannon29234
+Node: Creating a Site on CloudCannon29471
+Node: Editing a Site on CloudCannon29681
+Node: Where to Go from Here29919
+Node: Netlify CMS30102
+Node: Setting Up the Netlify CMS30346
+Node: Where to Go from Here 130538
+Node: Jekyll Admin30720
+Node: Setting Up Jekyll Admin30999
+Node: Editing a Site in Jekyll Admin31190
+Node: Where to Go from Here 231427
+Node: More Options31614
+Node: Forestryio31815
+Node: Lektor31945
+Node: Headless CMS32086
+Node: Deployment32220
+Node: Plain Old Web Servers32506
+Node: Cloud File Storage Providers32683
+Node: Hosting a Site on Amazon S332988
+Node: Hosting a Site on Google Cloud Storage33215
+Node: Deploying with Surge33464
+Node: Deploying with Netlify33669
+Node: Summary33857
+Node: Mirgrating to a Static Site33986
+Node: Migrating from WordPress to Jekyll34270
+Node: Other Migration Options34498
+Node: Hugo34822
+Node: Middleman34946
+Node: Hexo35093
+Node: Harp35230
+Node: Many More Options Are Available35389
+Node: Go Forth and Be Static35589
+Node: Index35781
 
 End Tag Table
 

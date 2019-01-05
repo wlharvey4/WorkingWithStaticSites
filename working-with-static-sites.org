@@ -5,7 +5,7 @@
 #+AUTHOR: Raymond Camden
 #+SUBAUTHOR: Brian Rinaldo
 #+DATE: February 28, 2017
-#+MACRO: VERSION 0.0.7
+#+MACRO: VERSION 0.1.0
 #+MACRO: EDITION 0.1
 
 #+texinfo: @insertcopying
@@ -174,6 +174,148 @@
               default to a blog template.  Blogs are content-focused by design
               and, in many cases, user interaction is limited to comments,
               where services like [[https://disqus.com/][Disqus]] con fill the requirement.
+
+** What Are Static Sites
+   #+cindex: static site generators
+   #+cindex: function, static site generator
+   #+cindex: markup language
+   #+cindex: static site generators, list of
+   #+cindex: static site generators, data, metadata
+   #+cindex: data, SSG's
+   #+cindex: metadata, SSG's
+   Static site generators solve the pain of building and maintaining a static
+   site.  The fundamentals of a static site generator are extremely simple:
+   they take in dynamic content and layout and output static HTML, CSS, and
+   JavaScript files.  There are literally hundreds of static site generators
+   <<static-site-generators>>([[https://staticsitegenerators.net/]]) but
+   essentially they all do exactly the same thing and, for the most part,
+   function similarly.
+
+   - lightweight markup language (~Markdown .md~)
+   - a templating language (~Handlebars {{}}~)
+   - data/metadata (~Yaml .yml~)
+   - CSS preprocessor (~Sass .scss~)
+   - a compile-to-JavaScript language (~CoffeScript .coffee~)
+   - \dArr
+   - S S G \rArr ~.html .css .js~
+
+
+   #+cindex: static site generators, in common
+   {{{heading(What SSG's Have In Common)}}}
+   - Templating language ::
+        Use one or more, such as Liquid, Handlebars, Jade.  This is a key part
+        of any static site generator, as it allows one to build a layout/theme
+        for a site and plug in dynamic content during a build.
+   - Markup language ::
+        Use one or more ([[http://bit.ly/2lrz8JP]]) such as Markdown, AsciiDoc,
+        reStructuredText.  Using a lightweight markup language makes it quicker
+        and easier to write content using any text editor.
+   - Command line ::
+        Are run via the command line.
+   - Local development server ::
+        This allows you to develop and test locally befdore building and
+        deploying your changes.  Typically, the tool watches the folder where
+        the site files are being edited and recompiles the site on-the-fly as
+        you edit them.
+   - Extensible ::
+        In most cases, if your static site generator doesn't support a feature
+                   or language that you need, it has a build-in plugin
+                   architecture that allows you to add that in (provided you
+                   can code in the language the tool is built upon).
+   - Support file-based data formats ::
+        e.g. YAML, TOML, JSON.  File-based data allows you to structure any
+        type of data independent of its display.
+
+
+   #+cindex: static site generators, report
+   #+begin_cartouche
+   @@texinfo:@sansserif{@@The author has published a report called
+   @@texinfo:@cite{@@Static Site Generators: Modern Tools for Static Web
+   Development (O'Reilly 2015)@@texinfo:}@@.  The report focuses on the history
+   of static sites, how they differ from dynamic sites built using content
+   management systems or blog engines, and gives some details about the
+   available static site generators.@@texinfo:}@@
+
+   @@texinfo:@sansserif{@@The report is free and can be downloaded from
+   O'Reilly here: [[http://oreil.ly/2l4fL8j]].@@texinfo:}@@
+   #+end_cartouche
+
+*** How to Choose a Static Site Generator
+    #+cindex: static site generator, using
+    So now with a basic understanding of what a static site generator is, how
+    can one use them?  The first issue to resolve is trying to figure out which
+    one to use.  This isn't an easy decision, since there are in excess of 445
+    different available options.  ([[static-site-generators][List of SSG's]]). Even after filtering out
+    projects that haven't been updated recently, there are still hundreds of
+    potential tools.
+
+    {{{subheading(How To Choose the Right SSG?)}}}
+    #+cindex: static site generator, choosing
+    #+attr_texinfo: :indic @i
+   - The relative ``health'' of the project ::
+        How recently has it been updated, and how big and active is the
+        community?
+   - How good is the documentation ::
+        Many of the hundreds of static site generators (probably a majority)
+        are not well documented.  This can cause you to spend far more time
+        than necessary building your site and lead to needless frustration.
+        Review the documentation carefully before committing to a project and
+        don't assume that being able to read the source is sufficient.
+   - Does it support my requirements ::
+        This can involve very specific requirements (an importer or specific
+        plugin) or a more general ability to meet amy needs (is it even
+        extenible?).
+   - Is the language it is built upon important to me ::
+        For most, a static site generator will work well out of the box.  But
+        in some cases it might be necessary to customize your generator via
+        plugins or even contributions to the source code.  In these cases,
+        knowing the underlying language can be important.
+
+
+*** Going Forward
+    The next chapters will look at some of the more mature and popular options
+    for developing static sites, such as:
+    - Jekyll (Ruby)
+    - Hugo (Go)
+    - Harp (JavaScript)
+
+
+    Not only does each have a different underlying language, which may be an
+    important consideration, but each also has its own pros and cons.  The
+    chapters will look at building some common use cases:
+    - a basic informational site
+    - a blog
+    - documentation site
+
+
+    {{{noindent}}}using these tools in ways that take advantage of their
+    relative merits.
+
+    {{{heading(Dynamic Features)}}}
+    Once the basics of the static site have been built, there needs to be added
+    some dynamic features, like comments on a blog post, or a site search.  Or,
+    if we have to support content contributors that aren't comfortable writing
+    posts in Markdown via a text editor, we might want to add a CMS-like
+    backend to the site to allow for easy editing.  The following will take a
+    look at multiple solutions that solve each of these problems.
+
+    {{{heading(Deployment)}}}
+    After the site is complete, it's time to deploy it.  While this can be as
+    easy as simply FTPing files onto a server, in most cases you'll want to
+    automate the process or take advantage of services that can manage the
+    build process for you.  The following chapters will explore a variety of
+    tools and services that can ease the deployment process.
+
+    {{{heading(Migration)}}}
+    Finally, you may be evaluating static sites as an option to replace an
+    existing site that uses a tool like WorkPress or some other CMS.  For these
+    cases, the chapters will dive into tools that ease the process of migrating
+    to a static site generator from a CMS by bringing over existing content.
+
+    {{{heading(SSG Ecosystem)}}}
+    In the end, this book hopes to provide you with a broad overview of the
+    existing statit site generator ecosystem, while diving into the actual
+    implementation details of how to accomplish your goals with these tools.
 
 * Building a Basic Static Site
 
@@ -354,3 +496,6 @@
 #+MACRO: subauthor Brian Rinaldo
 #+MACRO: command @@texinfo:@command{*@@$1@@texinfo:*}@@
 #+MACRO: samp @@texinfo:@samp{@@<$1>@@texinfo:}@@
+#+MACRO: heading @@texinfo:@heading @@$1
+#+MACRO: subheading @@texinfo:@subheading @@$1
+#+MACRO: noindent @@texinfo:@noindent @@
