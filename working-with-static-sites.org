@@ -5,7 +5,7 @@
 #+AUTHOR: Raymond Camden
 #+SUBAUTHOR: Brian Rinaldo
 #+DATE: February 28, 2017
-#+MACRO: VERSION 0.1.0
+#+MACRO: VERSION 0.1.1
 #+MACRO: EDITION 0.1
 
 #+texinfo: @insertcopying
@@ -319,7 +319,123 @@
 
 * Building a Basic Static Site
 
+  #+cindex: brochure-ware
+  #+cindex: simple site
+  #+cindex: basic static site
+  #+cindex: static site, basic
+  The first site will be incredibly simple: /brochure-ware/.  There are times
+  when a website will be nothing more than one or two pages of content.  While
+  your product is in development, you may simply need a single-page ``Coming
+  Soon'' site.
+
+  Other examples of simple sites include the following:
+
+  - A restaurent site providing hours, address, and a menu
+    #+cindex: mobile app, landing page
+    #+cindex: landing page, mobile app
+  - A landing page for your mobile app that provides links to the various app
+    stores
+    #+cindex: portfolio page
+    #+cindex: resume page
+  - A portfolio page that functions as a resume for someone looking for a job
+
+
+  In all of these examples, the entire site might consist of nothing more than
+  one or two unique pages.  A static site generator might be overkill for such
+  a thing, but small projects have a way of growing---not the other way
+  around.  The benefits that static site generators provide will become /more/
+  useful over time as the site grows with new content.
+
+  {{{heading(First Example Site)}}}
+  #+cindex: first site
+  #+cindex: Camden Grounds
+  The first example site will be an online presence for a coffee shop called
+  Camden Grounds.  For Camden Grounds, the site will consist of:
+
+    #+cindex: home page, simple site
+  - A home page which is mostly pretty images
+  - A menu showing a list of various coffees, teas, cookies, and more
+  - A list of locations because Camden Grounds is actually a chain
+  - An ``About Us'' page talking about the history of the company.
+
+
+  That is a total of four pages and a static site generator may be a bit much
+  for this, but it will be ``future proof'' for when it expands.
+
+  #+cindex: Harp
+  #+cindex: static site generator, Harp
+  This site will make use of the static site generator Harp.
+
 ** Welcome to Harp
+   #+cindex: Harp
+
+   [[http://harpjs.com][Harp]] is a lightweight static site generator.  It is rather simple and, at
+   times, limited but can be easy to pick up for people new to static sites.
+   Harp requires minimal setup and focues more on convention than
+   configuration.  As long as you follow a few simple rules in terms of
+   organization, Harp will ``just work.''
+
+*** Install Harp
+   #+cindex: Harp, install
+   #+cindex: npm
+   #+cindex: Node Package Manager
+   #+cindex: Node.js
+   {{{command(npm)}}}(Node Package Manager) must be installed on your system.
+   The easiest way is to install [[https://nodejs.org/en/][NodeJS]].
+
+   Once you have Node installed and {{{command(npm)}}} is working, install
+   Harp:
+   #+cindex: install harp
+   : npm install -g harp
+
+   {{{noindent}}}To confirm Harp installed correctly, run {{{command(harp)}}}
+   in your terminal.  You should get a usage message.
+
+*** Use Harp
+   #+cindex: Harp, using
+   #+cindex: Harp, web server
+   #+cindex: web server, Harp
+   #+cindex: preprocessors, Harp
+   #+cindex: Harp, preprocessors
+   #+cindex: dynamic resources, Harp
+   #+cindex: Harp, dynamic resources
+   Harp has a few different features, but its simplest use is to enable a web
+   server in a directory of files.  Instead of just serving up files as they
+   are, Harp supports different preprocessors that enable you to build dynamic
+   resources.  You can mix and match any of these preprocessors in any way, or
+   none.  Harp won't care.
+
+   {{{subheading(To Write HTML)}}}
+   #+cindex: Harp, HTML
+   #+cindex: HTML, Harp
+   #+cindex: Markdown
+   #+cindex: Jade
+   #+cindex: Embedded JavaScript
+   #+cindex: EJS
+   You can use Markdown, Jade, or Embedded JavaScript (EJS).  By simply using
+   the proper extension (~.md~, ~.jade~, or ~.ejs~), Harp will automatically
+   convert the syntax for each particular preprocessor into HTML.  You can use
+   regular HTML files also.
+
+   {{{subheading(To Write CSS)}}}
+   #+cindex: CSS, Harp
+   #+cindex: Harp, CSS
+   #+cindex: Harp, Less
+   #+cindex: Less, Harp
+   #+cindex: Harp, Sass
+   #+cindex: Sass, Harp
+   #+cindex: Stylus, Harp
+   #+cindex: Harp, Stylus
+   You can use Less (~.less~), Sass (~.scss~), or Stylus (~.styl~), as well as
+   regular CSS files.
+
+   {{{subheading(To Write JavaScript)}}}
+   #+cindex: Harp, JavaScript
+   #+cindex: JavaScript, Harp
+   #+cindex: Harp, CoffeeScript
+   #+cindex: CoffeeScript, Harp
+   The only option you have is CoffeeScript.  Any file with a ~.coffee~
+   extension will be converted from CoffeeScript into JavaScript.
 
 ** Your First Harp Project
 
