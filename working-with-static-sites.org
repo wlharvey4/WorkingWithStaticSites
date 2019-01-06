@@ -5,10 +5,9 @@
 #+AUTHOR: Raymond Camden
 #+SUBAUTHOR: Brian Rinaldo
 #+DATE: February 28, 2017
-#+MACRO: VERSION 0.1.1
+#+MACRO: VERSION 0.1.2
 #+MACRO: EDITION 0.1
-
-#+texinfo: @insertcopying
+#+TEXINFO: @insertcopying
 
 * Preface
   :PROPERTIES:
@@ -439,6 +438,51 @@
 
 ** Your First Harp Project
 
+   The Harp CLI supports creating an initial ``seed'' application, but it may
+   be easier to start more simply.
+
+   - Create an empty folder---it doesn't matter what it is called---and add a
+     file called {{{file(index.md)}}}.
+   - For the first test, use Markdown; this is completely arbitrary. See
+     [[ex:Example1][Example 1]] for contents of ~index.md~.
+
+   #+name: ex:Example1
+   #+caption: Contents of ~index.md~ file
+   #+begin_src markdown -n :tangle Harp/index.md
+   Hello World
+   ===
+
+   This is a page.  Woot.
+   #+end_src
+
+   {{{heading(Running Harp on ~index.md~)}}}
+
+   At the command line, ensure that you are in the directory that contains the
+   file, and run {{{command(harp server)}}}.  You should see Harp start up and
+   describe where it is running.
+
+   #+begin_example
+   ------------
+   Harp v0.29.0 – Chloi Inc. 2012–2015
+   Your server is listening at http://localhost:9000/
+   Press Ctl+C to stop the server
+   ------------
+   #+end_example
+
+   Now open your browser to the address and port shown in your command prompt,
+   and you will see the web page rendered via Harp.  Notice how the Markdown
+   was automatically converted into HTML.
+
+   #+cindex: URL, proper linking
+   #+cindex: preprocessor, Harp, linking
+   Harp makes your file available as an HTML file in the URL as well.  If you
+   try to access {{{file(index.html)}}}, Harp will recognize that
+   {{{file(index.md)}}} represents this URL and will serve that file up.  No
+   matter what preprocessor you use, when you actually /link/ to pages or
+   resources, you'll always use the ``proper'' type for what the preprocessor
+   supports.  For example, if you want to add a CSS file and you are using
+   Less, you don't link to ~styles.less~, but rather to ~styles.css~ instead.
+
 ** Working With Layouts and Partials
 
 ** Working With Data
@@ -599,9 +643,14 @@
   Produced: {{{time(%F %R)}}}
   Version: {{{VERSION}}}
   Edition: {{{EDITION}}}
+* Listing
+  :PROPERTIES:
+  :Unnumbered: t
+  :END:
+  #+TEXINFO: @listoffloats Listing
 * Index
   :PROPERTIES:
-  :Index:    t
+  :Index:    cp
   :END:
 * Export Settings                                                  :noexport:
 #+TEXINFO_PRINTED_TITLE: Outline of @i{Working With Static Sites}
@@ -611,6 +660,7 @@
 #+TEXINFO_DIR_DESC:Outline of Working With Static Sites by R Campden & B Rinaldo
 #+MACRO: subauthor Brian Rinaldo
 #+MACRO: command @@texinfo:@command{*@@$1@@texinfo:*}@@
+#+MACRO: file @@texinfo:@file{@@$1@@texinfo:}@@
 #+MACRO: samp @@texinfo:@samp{@@<$1>@@texinfo:}@@
 #+MACRO: heading @@texinfo:@heading @@$1
 #+MACRO: subheading @@texinfo:@subheading @@$1
