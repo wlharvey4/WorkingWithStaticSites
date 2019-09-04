@@ -5,7 +5,7 @@
 #+AUTHOR: Raymond Camden
 #+SUBAUTHOR: Brian Rinaldo
 #+DATE: February 28, 2017
-#+MACRO: VERSION 0.1.2
+#+MACRO: VERSION 0.1.3
 #+MACRO: EDITION 0.1
 #+TEXINFO: @insertcopying
 
@@ -375,20 +375,508 @@
    organization, Harp will ``just work.''
 
 *** Install Harp
-   #+cindex: Harp, install
-   #+cindex: npm
-   #+cindex: Node Package Manager
-   #+cindex: Node.js
-   {{{command(npm)}}}(Node Package Manager) must be installed on your system.
-   The easiest way is to install [[https://nodejs.org/en/][NodeJS]].
+#+cindex: Harp, install
+#+cindex: npm
+#+cindex: Node Package Manager
+#+cindex: Node.js
+{{{command(npm)}}}(Node Package Manager) must be installed on your system.
+The easiest way is to install [[https://nodejs.org/en/][NodeJS]].
 
-   Once you have Node installed and {{{command(npm)}}} is working, install
-   Harp:
-   #+cindex: install harp
-   : npm install -g harp
+Once you have Node installed and {{{command(npm)}}} is working, install
+Harp:
+#+cindex: install harp
+: npm install -g harp
 
-   {{{noindent}}}To confirm Harp installed correctly, run {{{command(harp)}}}
-   in your terminal.  You should get a usage message.
+{{{noindent}}}To confirm Harp installed correctly, run {{{command(harp)}}}
+in your terminal.  You should get a usage message.
+
+#+caption:Install Harp
+#+name:com:install-harp
+#+begin_src sh :results output :exports both
+mkdir Harp
+cd Harp
+yarn init -yp
+yarn add harp
+#+end_src
+
+#+RESULTS: com:install-harp
+#+begin_example
+yarn init v1.17.3
+success Saved package.json
+Done in 0.05s.
+yarn add v1.17.3
+info No lockfile found.
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 460 new dependencies.
+info Direct dependencies
+└─ harp@0.30.1
+info All dependencies
+├─ @types/babel-types@7.0.7
+├─ @types/babylon@6.16.5
+├─ acorn-globals@3.1.0
+├─ acorn-node@1.8.2
+├─ acorn-walk@7.0.0
+├─ acorn@3.3.0
+├─ ajv@6.10.2
+├─ align-text@0.1.4
+├─ ansi-styles@3.2.1
+├─ aproba@1.2.0
+├─ are-we-there-yet@1.1.5
+├─ argparse@1.0.10
+├─ arr-flatten@1.1.0
+├─ array-find-index@1.0.2
+├─ asap@2.0.6
+├─ asn1.js@4.10.1
+├─ asn1@0.2.4
+├─ assert@1.5.0
+├─ assign-symbols@1.0.0
+├─ async-each@1.0.3
+├─ async-foreach@0.1.3
+├─ asynckit@0.4.0
+├─ atob@2.1.2
+├─ autoprefixer@7.1.6
+├─ aws-sign2@0.7.0
+├─ aws4@1.8.0
+├─ babel-runtime@6.26.0
+├─ babel-types@6.26.0
+├─ babylon@6.18.0
+├─ balanced-match@1.0.0
+├─ base@0.11.2
+├─ base64-js@1.3.1
+├─ basic-auth@2.0.1
+├─ bcrypt-pbkdf@1.0.2
+├─ binary-extensions@1.13.1
+├─ bl@1.2.2
+├─ block-stream@0.0.9
+├─ brace-expansion@1.1.11
+├─ braces@2.3.2
+├─ browser-pack@6.1.0
+├─ browser-resolve@1.11.3
+├─ browserify-aes@1.2.0
+├─ browserify-cipher@1.0.1
+├─ browserify-des@1.0.2
+├─ browserify-sign@4.0.4
+├─ browserify-zlib@0.2.0
+├─ browserify@16.5.0
+├─ browserslist@2.11.3
+├─ buffer-alloc-unsafe@1.1.0
+├─ buffer-alloc@1.2.0
+├─ buffer-crc32@0.2.13
+├─ buffer-fill@1.0.0
+├─ buffer-from@1.1.1
+├─ buffer-xor@1.0.3
+├─ buffer@5.4.2
+├─ builtin-status-codes@3.0.0
+├─ cache-base@1.0.1
+├─ cached-path-relative@1.0.2
+├─ camelcase-keys@2.1.0
+├─ caniuse-lite@1.0.30000989
+├─ caseless@0.12.0
+├─ caw@2.0.1
+├─ center-align@0.1.3
+├─ chalk@2.4.2
+├─ change-case@2.3.1
+├─ character-parser@1.2.2
+├─ chokidar@2.1.8
+├─ chownr@1.1.2
+├─ class-utils@0.3.6
+├─ classifier@0.1.0
+├─ clean-css@3.4.28
+├─ cli@0.11.3
+├─ cliui@2.1.0
+├─ clone@2.1.2
+├─ co@4.6.0
+├─ code-point-at@1.1.0
+├─ coffee-script@1.12.7
+├─ collection-visit@1.0.0
+├─ color-convert@1.9.3
+├─ color-name@1.1.3
+├─ combine-source-map@0.8.0
+├─ combined-stream@1.0.8
+├─ commander@2.8.1
+├─ concat-map@0.0.1
+├─ concat-stream@1.6.2
+├─ config-chain@1.1.12
+├─ connect@3.7.0
+├─ console-browserify@1.1.0
+├─ console-control-strings@1.1.0
+├─ constant-case@1.1.2
+├─ constantinople@3.1.2
+├─ constants-browserify@1.0.0
+├─ content-disposition@0.5.3
+├─ convert-source-map@1.1.3
+├─ copy-descriptor@0.1.1
+├─ core-js@2.6.9
+├─ core-util-is@1.0.2
+├─ create-ecdh@4.0.3
+├─ create-hmac@1.1.7
+├─ cross-spawn@3.0.1
+├─ crypto-browserify@3.12.0
+├─ css-parse@1.7.0
+├─ currently-unhandled@0.4.1
+├─ dash-ast@1.0.0
+├─ dashdash@1.14.1
+├─ date-now@0.1.4
+├─ debug@2.6.9
+├─ decamelize@1.2.0
+├─ decode-uri-component@0.2.0
+├─ decompress-response@3.3.0
+├─ decompress-tar@4.1.1
+├─ decompress-tarbz2@4.1.1
+├─ decompress-targz@4.1.1
+├─ decompress-unzip@4.0.1
+├─ decompress@4.2.0
+├─ deep-extend@0.6.0
+├─ delayed-stream@1.0.0
+├─ delegates@1.0.0
+├─ deps-sort@2.0.0
+├─ des.js@1.0.0
+├─ destroy@1.0.4
+├─ detect-libc@1.0.3
+├─ detective@5.2.0
+├─ diffie-hellman@5.0.3
+├─ domain-browser@1.2.0
+├─ dot-case@1.1.2
+├─ double-ended-queue@2.1.0-0
+├─ download-github-repo@0.1.4
+├─ download@6.2.5
+├─ duplexer2@0.1.4
+├─ duplexer3@0.1.4
+├─ ecc-jsbn@0.1.2
+├─ ee-first@1.1.1
+├─ ejs@2.5.7
+├─ electron-to-chromium@1.3.252
+├─ end-of-stream@1.4.1
+├─ envy-json@0.2.1
+├─ errno@0.1.7
+├─ error-ex@1.3.2
+├─ esprima@4.0.1
+├─ esutils@2.0.3
+├─ etag@1.8.1
+├─ events@2.1.0
+├─ exit@0.1.2
+├─ expand-brackets@2.1.4
+├─ ext-list@2.2.2
+├─ ext-name@5.0.0
+├─ extend@3.0.2
+├─ extglob@2.0.4
+├─ extsprintf@1.3.0
+├─ fast-deep-equal@2.0.1
+├─ fast-json-stable-stringify@2.0.0
+├─ fd-slicer@1.1.0
+├─ filename-reserved-regex@2.0.0
+├─ filenamify@2.1.0
+├─ fill-range@4.0.0
+├─ finalhandler@1.1.2
+├─ find-up@1.1.2
+├─ for-in@1.0.2
+├─ forever-agent@0.6.1
+├─ form-data@2.3.3
+├─ fresh@0.5.2
+├─ fs-constants@1.0.0
+├─ fs-extra@1.0.0
+├─ fs-minipass@1.2.6
+├─ fsevents@1.2.9
+├─ fstream@1.0.12
+├─ function-bind@1.1.1
+├─ gather-stream@1.0.0
+├─ gauge@2.7.4
+├─ gaze@1.1.3
+├─ get-assigned-identifiers@1.2.0
+├─ get-caller-file@1.0.3
+├─ get-proxy@2.1.0
+├─ get-value@2.0.6
+├─ getpass@0.1.7
+├─ glob-parent@3.1.0
+├─ glob@7.1.4
+├─ globule@1.2.1
+├─ got@7.1.0
+├─ har-schema@2.0.0
+├─ har-validator@5.1.3
+├─ harp-minify@0.4.0
+├─ harp@0.30.1
+├─ has-ansi@2.0.0
+├─ has-flag@3.0.0
+├─ has-symbol-support-x@1.4.2
+├─ has-to-string-tag-x@1.4.1
+├─ has-unicode@2.0.1
+├─ has-value@1.0.0
+├─ has-values@1.0.0
+├─ has@1.0.3
+├─ hash.js@1.1.7
+├─ hmac-drbg@1.0.1
+├─ hosted-git-info@2.8.4
+├─ html-minifier@1.1.1
+├─ htmlescape@1.1.1
+├─ http-errors@1.7.3
+├─ http-signature@1.2.0
+├─ https-browserify@1.0.0
+├─ iconv-lite@0.4.24
+├─ ieee754@1.1.13
+├─ ignore-walk@3.0.1
+├─ image-size@0.5.5
+├─ in-publish@2.0.0
+├─ indent-string@2.1.0
+├─ ini@1.3.5
+├─ inline-source-map@0.6.2
+├─ insert-module-globals@7.2.0
+├─ invert-kv@1.0.0
+├─ is-accessor-descriptor@1.0.0
+├─ is-arrayish@0.2.1
+├─ is-binary-path@1.0.1
+├─ is-data-descriptor@1.0.0
+├─ is-descriptor@1.0.2
+├─ is-extglob@2.1.1
+├─ is-finite@1.0.2
+├─ is-fullwidth-code-point@1.0.0
+├─ is-glob@4.0.1
+├─ is-lower-case@1.1.3
+├─ is-natural-number@4.0.1
+├─ is-object@1.0.1
+├─ is-plain-obj@1.1.0
+├─ is-plain-object@2.0.4
+├─ is-promise@2.1.0
+├─ is-retry-allowed@1.1.0
+├─ is-typedarray@1.0.0
+├─ is-upper-case@1.1.2
+├─ is-utf8@0.2.1
+├─ is-windows@1.0.2
+├─ isarray@1.0.0
+├─ isexe@2.0.0
+├─ isstream@0.1.2
+├─ jjade@1.11.1
+├─ js-base64@2.5.1
+├─ js-yaml@3.13.1
+├─ json-schema-traverse@0.4.1
+├─ json-schema@0.2.3
+├─ json-stable-stringify@0.0.1
+├─ json-stringify-safe@5.0.1
+├─ jsonfile@2.4.0
+├─ jsonify@0.0.0
+├─ jsonparse@1.3.1
+├─ jsprim@1.4.1
+├─ jstransformer-markdown@1.2.1
+├─ jstransformer@1.0.0
+├─ kind-of@3.2.2
+├─ klaw@1.3.1
+├─ labeled-stream-splicer@2.0.2
+├─ language-classifier@0.0.1
+├─ lazy-cache@1.0.4
+├─ lcid@1.0.0
+├─ less@3.8.1
+├─ load-json-file@1.1.0
+├─ lodash.assign@4.2.0
+├─ lodash.clonedeep@4.5.0
+├─ lodash.memoize@3.0.4
+├─ lodash.mergewith@4.6.2
+├─ lodash@4.17.15
+├─ longest@1.0.1
+├─ loud-rejection@1.6.0
+├─ lower-case-first@1.0.2
+├─ lowercase-keys@1.0.1
+├─ lru-cache@4.1.1
+├─ map-obj@1.0.1
+├─ map-visit@1.0.0
+├─ markdown@0.5.0
+├─ marked@0.7.0
+├─ meow@3.7.0
+├─ micromatch@3.1.10
+├─ miller-rabin@4.0.1
+├─ mime-db@1.40.0
+├─ mime-types@2.1.24
+├─ mime@1.6.0
+├─ mimic-response@1.0.1
+├─ minimalistic-crypto-utils@1.0.1
+├─ minimatch@3.0.4
+├─ minimist@1.2.0
+├─ minizlib@1.2.1
+├─ mixin-deep@1.3.2
+├─ module-deps@6.2.1
+├─ ms@2.1.2
+├─ nan@2.14.0
+├─ nanomatch@1.2.13
+├─ needle@2.4.0
+├─ node-gyp@3.8.0
+├─ node-pre-gyp@0.12.0
+├─ node-sass@4.9.3
+├─ nopt@3.0.6
+├─ normalize-package-data@2.5.0
+├─ normalize-path@2.1.1
+├─ normalize-range@0.1.2
+├─ npm-bundled@1.0.6
+├─ npm-conf@1.1.3
+├─ npm-packlist@1.4.4
+├─ npmlog@4.1.2
+├─ num2fraction@1.2.2
+├─ oauth-sign@0.9.0
+├─ object-assign@4.1.1
+├─ object-copy@0.1.0
+├─ once@1.4.0
+├─ os-browserify@0.3.0
+├─ os-homedir@1.0.2
+├─ os-locale@1.4.0
+├─ os-tmpdir@1.0.2
+├─ osenv@0.1.5
+├─ outpipe@1.1.1
+├─ p-cancelable@0.3.0
+├─ p-event@1.3.0
+├─ p-finally@1.0.0
+├─ pako@1.0.10
+├─ param-case@1.1.2
+├─ parents@1.0.1
+├─ parse-json@2.2.0
+├─ pascal-case@1.1.2
+├─ pascalcase@0.1.1
+├─ path-browserify@0.0.1
+├─ path-case@1.1.2
+├─ path-dirname@1.0.2
+├─ path-exists@2.1.0
+├─ path-parse@1.0.6
+├─ path-platform@0.11.15
+├─ path-type@1.1.0
+├─ pause@0.1.0
+├─ pend@1.2.0
+├─ performance-now@2.1.0
+├─ pinkie@2.0.4
+├─ posix-character-classes@0.1.1
+├─ postcss-value-parser@3.3.1
+├─ postcss@6.0.14
+├─ prepend-http@1.0.4
+├─ process-nextick-args@2.0.1
+├─ promise@7.3.1
+├─ proto-list@1.2.4
+├─ prr@1.0.1
+├─ psl@1.3.1
+├─ public-encrypt@4.0.3
+├─ punycode@1.4.1
+├─ qs@6.5.2
+├─ querystring-es3@0.2.1
+├─ querystring@0.2.0
+├─ randomfill@1.0.4
+├─ range-parser@1.2.1
+├─ rc@1.2.8
+├─ read-file-stdin@0.2.0
+├─ read-only-stream@2.0.0
+├─ read-pkg@1.1.0
+├─ readable-stream@2.3.6
+├─ readdirp@2.2.1
+├─ redent@1.0.0
+├─ redis-commands@1.5.0
+├─ redis-parser@2.6.0
+├─ redis@2.8.0
+├─ regenerator-runtime@0.11.1
+├─ relateurl@0.2.7
+├─ remove-trailing-separator@1.1.0
+├─ repeat-element@1.1.3
+├─ repeat-string@1.6.1
+├─ repeating@2.0.1
+├─ request@2.88.0
+├─ require-directory@2.1.1
+├─ require-main-filename@1.0.1
+├─ resolve-url@0.2.1
+├─ resolve@1.12.0
+├─ ret@0.1.15
+├─ right-align@0.1.3
+├─ safer-buffer@2.1.2
+├─ sass-graph@2.2.4
+├─ sax@0.5.8
+├─ scss-tokenizer@0.2.3
+├─ seek-bzip@1.0.5
+├─ semver@5.7.1
+├─ send@0.17.1
+├─ set-blocking@2.0.0
+├─ set-value@2.0.1
+├─ setprototypeof@1.1.1
+├─ shell-quote@1.7.2
+├─ simple-concat@1.0.0
+├─ snapdragon-node@2.1.1
+├─ snapdragon-util@3.0.1
+├─ sort-keys-length@1.0.1
+├─ sort-keys@1.1.2
+├─ source-map-resolve@0.5.2
+├─ source-map-url@0.4.0
+├─ source-map@0.5.7
+├─ spdx-correct@3.1.0
+├─ spdx-exceptions@2.2.0
+├─ split-string@3.1.0
+├─ sprintf-js@1.0.3
+├─ sqwish@0.2.2
+├─ sshpk@1.16.1
+├─ static-extend@0.1.2
+├─ statuses@1.5.0
+├─ stdout-stream@1.4.1
+├─ stream-browserify@2.0.2
+├─ stream-combiner2@1.1.1
+├─ stream-http@3.1.0
+├─ stream-splicer@2.0.1
+├─ strip-bom@2.0.0
+├─ strip-dirs@2.1.0
+├─ strip-indent@1.0.1
+├─ strip-json-comments@2.0.1
+├─ strip-outer@1.0.1
+├─ stylus@0.54.5
+├─ supports-color@5.5.0
+├─ swap-case@1.1.2
+├─ syntax-error@1.4.0
+├─ tar-stream@1.6.2
+├─ tar@2.2.2
+├─ terraform@1.8.1
+├─ through@2.3.8
+├─ timed-out@4.0.1
+├─ timers-browserify@1.4.2
+├─ title-case@1.1.2
+├─ to-buffer@1.1.1
+├─ to-fast-properties@1.0.3
+├─ to-object-path@0.3.0
+├─ to-regex-range@2.1.1
+├─ toidentifier@1.0.0
+├─ tough-cookie@2.4.3
+├─ trim-newlines@1.0.0
+├─ trim-repeated@1.0.0
+├─ true-case-path@1.0.3
+├─ tty-browserify@0.0.1
+├─ tweetnacl@0.14.5
+├─ typedarray@0.0.6
+├─ uglify-js@2.6.1
+├─ umd@3.0.3
+├─ unbzip2-stream@1.3.3
+├─ undeclared-identifiers@1.1.3
+├─ underscore@1.9.1
+├─ union-value@1.0.1
+├─ unpipe@1.0.0
+├─ unset-value@1.0.0
+├─ upath@1.2.0
+├─ upper-case@1.1.3
+├─ uri-js@4.2.2
+├─ urix@0.1.0
+├─ url-parse-lax@1.0.0
+├─ url@0.11.0
+├─ use@3.1.1
+├─ util@0.10.4
+├─ utils-merge@1.0.1
+├─ uuid@3.3.3
+├─ validate-npm-package-license@3.0.4
+├─ verror@1.10.0
+├─ vm-browserify@1.1.0
+├─ void-elements@2.0.1
+├─ watchify@3.11.1
+├─ which-module@1.0.0
+├─ which@1.3.1
+├─ wide-align@1.1.3
+├─ window-size@0.1.0
+├─ with@5.1.1
+├─ wordwrap@0.0.2
+├─ wrap-ansi@2.1.0
+├─ write-file-stdout@0.0.2
+├─ y18n@3.2.1
+├─ yargs-parser@5.0.0
+└─ yauzl@2.10.0
+Done in 51.06s.
+#+end_example
 
 *** Use Harp
    #+cindex: Harp, using
@@ -438,50 +926,120 @@
 
 ** Your First Harp Project
 
-   The Harp CLI supports creating an initial ``seed'' application, but it may
-   be easier to start more simply.
+#+cindex:seed application, Harp
+#+cindex:Harp CLI
+The Harp CLI supports creating an initial ``seed'' application, but it may
+be easier to start more simply.
 
-   - Create an empty folder---it doesn't matter what it is called---and add a
-     file called {{{file(index.md)}}}.
-   - For the first test, use Markdown; this is completely arbitrary. See
-     [[ex:Example1][Example 1]] for contents of ~index.md~.
+- Create an empty folder---it doesn't matter what it is called---and add a file
+  called {{{file(index.md)}}}.[fn::I will call the root folder ~Harp/~]
 
-   #+name: ex:Example1
-   #+caption: Contents of ~index.md~ file
-   #+begin_src markdown -n :tangle Harp/index.md
-   Hello World
-   ===
+- For the first test, use Markdown; this is completely arbitrary. See
+  [[ex:Example1][Example 1]] for contents of ~index.md~.
 
-   This is a page.  Woot.
-   #+end_src
+#+caption: Contents of ~index.md~ file
+#+name: ex:Example1
+#+header: :mkdirp yes
+#+begin_src markdown -n :tangle Harp/index.md
+Hello World
+===
 
-   {{{heading(Running Harp on ~index.md~)}}}
+This is a page.  Woot.
+#+end_src
 
-   At the command line, ensure that you are in the directory that contains the
-   file, and run {{{command(harp server)}}}.  You should see Harp start up and
-   describe where it is running.
+{{{heading(Running Harp on ~index.md~)}}}
 
-   #+begin_example
-   ------------
-   Harp v0.29.0 – Chloi Inc. 2012–2015
-   Your server is listening at http://localhost:9000/
-   Press Ctl+C to stop the server
-   ------------
-   #+end_example
+At the command line, ensure that you are in the directory that contains the
+file, and run {{{command(harp server)}}}.  You should see Harp start up and
+describe where it is running.
 
-   Now open your browser to the address and port shown in your command prompt,
-   and you will see the web page rendered via Harp.  Notice how the Markdown
-   was automatically converted into HTML.
+#+begin_example
+------------
+Harp v0.29.0 – Chloi Inc. 2012–2015
+Your server is listening at http://localhost:9000/
+Press Ctl+C to stop the server
+------------
+#+end_example
 
-   #+cindex: URL, proper linking
-   #+cindex: preprocessor, Harp, linking
-   Harp makes your file available as an HTML file in the URL as well.  If you
-   try to access {{{file(index.html)}}}, Harp will recognize that
-   {{{file(index.md)}}} represents this URL and will serve that file up.  No
-   matter what preprocessor you use, when you actually /link/ to pages or
-   resources, you'll always use the ``proper'' type for what the preprocessor
-   supports.  For example, if you want to add a CSS file and you are using
-   Less, you don't link to ~styles.less~, but rather to ~styles.css~ instead.
+Now open your browser to the address and port shown in your command prompt,
+and you will see the web page rendered via Harp.  Notice how the Markdown
+was automatically converted into HTML.
+
+#+caption:Running the Harp Server
+#+name:com:Harp-Server
+#+begin_src sh :dir Harp :results output :exports both
+yarn harp server&
+#+end_src
+
+#+RESULTS: com:Harp-Server
+
+#+cindex: URL, proper linking
+#+cindex: preprocessor, Harp, linking
+Harp makes your file available as an HTML file in the URL as well.  If you
+try to access {{{file(index.html)}}}, Harp will recognize that
+{{{file(index.md)}}} represents this URL and will serve that file up.  No
+matter what preprocessor you use, when you actually /link/ to pages or
+resources, you'll always use the ``proper'' type for what the preprocessor
+supports.  For example, if you want to add a CSS file and you are using
+Less, you don't link to ~styles.less~, but rather to ~styles.css~ instead.
+
+{{{subheading(Learning More About Markdown)}}}
+
+#+cindex:Markdown guide
+To learn more about Markdown, see the reference guide:
+- [[http://daringfireball.net/projects/markdown][Markdown Reference Guide]]
+
+
+{{{heading(Using Jade with Harp)}}}
+
+#+cindex:Jade template syntax
+Make another file, ~test.jade~, using the Jade template syntax.
+
+#+caption:A Jade File in Harp
+#+name:harp-test.jade
+#+begin_src js :tangle Harp/test.jade
+h1 This is Jade
+
+a(href="index.html") Go Home
+#+end_src
+
+This example has used Jade to create a header and a link back to the home
+page.  It is linking to ~index.html~ (do /not/ link to ~index.md~ because the
+final site, when static, will not include that extension).
+
+{{{subheading(Learning More About Jade)}}}
+
+#+cindex:Jade
+Learn more about Jade at its home page:
+- [[http://jade-lang.com][Jade Home]]
+
+
+{{{heading(Using EJS with Harp)}}}
+
+#+cindex:EJS with Harp
+Make another file to demonstrate EJS support.  EJS is an older templating
+language and resembles PHP or Classic ASP.  Unlike Jade and Markdown, which
+work from almost an abstraction layer over HTML, EJS requires you to write your
+HTML in --- TML.  You only use EJS's template language when outputting
+something dynamic.
+
+#+caption:EJS with Harp
+#+name:harp-anothertest.ejs
+#+begin_src html :tangle Harp/anothertest.ejs
+<h1>This is EJS</h1>
+
+The time is: <%= new Date() %>
+#+end_src
+
+The dynamic aspect bgins with ~<%=~ and ends with ~>~.  The inner portion is
+pure JavaScript and will be executed when the template is rendered.  You would
+open this in your browser by going to ~anothertest.html~.
+
+{{{subheading(Learning More About EJS)}}}
+
+#+cindex:EJS home
+Learn more about EJS at its home page:
+- [[http://www.embeddedjs.com][EJS Home]]
 
 ** Working With Layouts and Partials
 
